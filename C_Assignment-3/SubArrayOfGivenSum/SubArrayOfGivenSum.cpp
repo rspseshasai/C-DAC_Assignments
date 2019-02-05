@@ -14,7 +14,7 @@ int main()
 	for (int i = 0; i < n; i++)
 		cin >> arr[i];
 	int start=0;
-	int sum;
+	int sum, flag=0;
 	cout << "Enter Sum: ";
 	cin >> sum;
 	int temp=0, end=0;
@@ -28,6 +28,7 @@ int main()
 		if (sum == temp)
 		{
 			end = i - 1;
+			flag = 1;
 			break;
 		}
 		if (i < n)
@@ -35,9 +36,15 @@ int main()
 			temp += arr[i];
 		}
 	}
-	cout<<"Subarray found between " << start << " " << end << "\n";
-	for (int i = start; i <= end; i++)
-		cout << arr[i] << " ";
-	cout << "\n";
+	if (flag == 0)
+		cout << "No Subarray Found\n";
+	else
+	{
+		cout << "Subarray found between " << start << " " << end << "\n";
+		for (int i = start; i <= end; i++)
+			cout << arr[i] << " ";
+		cout << "\n";
+	}
+	system("pause");
 	
 }
