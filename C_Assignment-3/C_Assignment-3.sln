@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SubArrayOfGivenSum", "SubAr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MoveNegativestoFront", "MoveNegativestoFront\MoveNegativestoFront.vcxproj", "{AF9C684A-DCE2-4925-912A-A9F799E4A143}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "countOnesinBinary", "countOnesinBinary\countOnesinBinary.vcxproj", "{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{AF9C684A-DCE2-4925-912A-A9F799E4A143}.Release|x64.Build.0 = Release|x64
 		{AF9C684A-DCE2-4925-912A-A9F799E4A143}.Release|x86.ActiveCfg = Release|Win32
 		{AF9C684A-DCE2-4925-912A-A9F799E4A143}.Release|x86.Build.0 = Release|Win32
+		{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}.Debug|x64.ActiveCfg = Debug|x64
+		{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}.Debug|x64.Build.0 = Debug|x64
+		{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}.Debug|x86.ActiveCfg = Debug|Win32
+		{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}.Debug|x86.Build.0 = Debug|Win32
+		{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}.Release|x64.ActiveCfg = Release|x64
+		{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}.Release|x64.Build.0 = Release|x64
+		{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}.Release|x86.ActiveCfg = Release|Win32
+		{45B1A8BE-AD31-4A25-900B-D3AAABE0CF17}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
