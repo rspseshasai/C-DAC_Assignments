@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-Bitwise-3",
+      "appliesTo": "C_Assignment/Bitwise-3/Bitwise-3.cpp",
+      "type": "launch"
+    }
+  ]
+}
