@@ -33,7 +33,7 @@ int dtob(int dec)
 	return 0;
 }
 
-int btod(int bin)
+int btod(long long int bin)
 {
 	int dec = 0, count = 0;
 	while (bin > 0)
@@ -44,7 +44,7 @@ int btod(int bin)
 	}
 	return dec;
 }
-void btoh(int bin)
+void btoh(long long int bin)
 {
 	
 	char hex[1000];
@@ -145,7 +145,7 @@ int main()
 			cout << "Decimal for given Binary is : " << btod(bin);
 			break;
 	case 3:	cout << "Enter a Binary number: ";
-			int bin1;
+			long long int bin1;
 			cin >> bin1;
 			btoh(bin1);
 			break;

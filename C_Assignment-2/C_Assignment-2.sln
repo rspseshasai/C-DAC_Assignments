@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrimeNums", "PrimeNums\Prim
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReverseNumber", "ReverseNumber\ReverseNumber.vcxproj", "{79F8768E-C19E-4CB3-B183-F053B0C42A2E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{35430ED7-BE71-4B98-A9F1-18ECF214361D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{79F8768E-C19E-4CB3-B183-F053B0C42A2E}.Release|x64.Build.0 = Release|x64
 		{79F8768E-C19E-4CB3-B183-F053B0C42A2E}.Release|x86.ActiveCfg = Release|Win32
 		{79F8768E-C19E-4CB3-B183-F053B0C42A2E}.Release|x86.Build.0 = Release|Win32
+		{35430ED7-BE71-4B98-A9F1-18ECF214361D}.Debug|x64.ActiveCfg = Debug|x64
+		{35430ED7-BE71-4B98-A9F1-18ECF214361D}.Debug|x64.Build.0 = Debug|x64
+		{35430ED7-BE71-4B98-A9F1-18ECF214361D}.Debug|x86.ActiveCfg = Debug|Win32
+		{35430ED7-BE71-4B98-A9F1-18ECF214361D}.Debug|x86.Build.0 = Debug|Win32
+		{35430ED7-BE71-4B98-A9F1-18ECF214361D}.Release|x64.ActiveCfg = Release|x64
+		{35430ED7-BE71-4B98-A9F1-18ECF214361D}.Release|x64.Build.0 = Release|x64
+		{35430ED7-BE71-4B98-A9F1-18ECF214361D}.Release|x86.ActiveCfg = Release|Win32
+		{35430ED7-BE71-4B98-A9F1-18ECF214361D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
