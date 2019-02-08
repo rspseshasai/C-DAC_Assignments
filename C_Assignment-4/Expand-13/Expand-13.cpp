@@ -18,10 +18,10 @@ int main()
 			if (i != 0 && i != strlen(s1) - 1)
 			{
 				int n1 = s1[i - 1], n2 = s1[i + 1];
-				for (int j = 0; j <= n2; j++)
+				for (int j = n1+1; j < n2; j++)
 				{
 					//strcat(s2, (char *)j);
-					cout << (char)j;
+					cout << (char)j ;
 				}
 			 }
 			else
@@ -35,7 +35,7 @@ int main()
 			cout << s1[i];
 		}
 	}
-
+	cout << "\n";
 	system("pause");
 }
 
