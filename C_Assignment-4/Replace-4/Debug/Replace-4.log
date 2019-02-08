@@ -1,0 +1,6 @@
+﻿  Replace-4.cpp
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\replace-4\replace-4.cpp(9): error C2228: left of '.length' must have class/struct/union
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\replace-4\replace-4.cpp(9): note: type is 'char *'
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\replace-4\replace-4.cpp(12): error C2065: 's': undeclared identifier
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\replace-4\replace-4.cpp(18): error C2664: 'char *replace(char *)': cannot convert argument 1 from 'const char *' to 'char *'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\replace-4\replace-4.cpp(18): note: Conversion loses qualifiers
