@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculator-1", "Calculator-
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RotateInt-12", "RotateInt-12\RotateInt-12.vcxproj", "{ADED2104-7082-447B-8213-58DFF590A5B8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dec2Bin-6", "Dec2Bin-6\Dec2Bin-6.vcxproj", "{B89BA306-C5BD-498E-9852-0B28ED011425}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -82,6 +84,14 @@ Global
 		{ADED2104-7082-447B-8213-58DFF590A5B8}.Release|x64.Build.0 = Release|x64
 		{ADED2104-7082-447B-8213-58DFF590A5B8}.Release|x86.ActiveCfg = Release|Win32
 		{ADED2104-7082-447B-8213-58DFF590A5B8}.Release|x86.Build.0 = Release|Win32
+		{B89BA306-C5BD-498E-9852-0B28ED011425}.Debug|x64.ActiveCfg = Debug|x64
+		{B89BA306-C5BD-498E-9852-0B28ED011425}.Debug|x64.Build.0 = Debug|x64
+		{B89BA306-C5BD-498E-9852-0B28ED011425}.Debug|x86.ActiveCfg = Debug|Win32
+		{B89BA306-C5BD-498E-9852-0B28ED011425}.Debug|x86.Build.0 = Debug|Win32
+		{B89BA306-C5BD-498E-9852-0B28ED011425}.Release|x64.ActiveCfg = Release|x64
+		{B89BA306-C5BD-498E-9852-0B28ED011425}.Release|x64.Build.0 = Release|x64
+		{B89BA306-C5BD-498E-9852-0B28ED011425}.Release|x86.ActiveCfg = Release|Win32
+		{B89BA306-C5BD-498E-9852-0B28ED011425}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
