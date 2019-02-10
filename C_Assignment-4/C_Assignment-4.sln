@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Delete-10", "Delete-10\Dele
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortStrings", "SortStrings\SortStrings.vcxproj", "{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringFunctions-15", "StringFunctions-15\StringFunctions-15.vcxproj", "{F40A1F71-654D-4B19-AA71-4582F4305AEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Release|x64.Build.0 = Release|x64
 		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Release|x86.ActiveCfg = Release|Win32
 		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Release|x86.Build.0 = Release|Win32
+		{F40A1F71-654D-4B19-AA71-4582F4305AEB}.Debug|x64.ActiveCfg = Debug|x64
+		{F40A1F71-654D-4B19-AA71-4582F4305AEB}.Debug|x64.Build.0 = Debug|x64
+		{F40A1F71-654D-4B19-AA71-4582F4305AEB}.Debug|x86.ActiveCfg = Debug|Win32
+		{F40A1F71-654D-4B19-AA71-4582F4305AEB}.Debug|x86.Build.0 = Debug|Win32
+		{F40A1F71-654D-4B19-AA71-4582F4305AEB}.Release|x64.ActiveCfg = Release|x64
+		{F40A1F71-654D-4B19-AA71-4582F4305AEB}.Release|x64.Build.0 = Release|x64
+		{F40A1F71-654D-4B19-AA71-4582F4305AEB}.Release|x86.ActiveCfg = Release|Win32
+		{F40A1F71-654D-4B19-AA71-4582F4305AEB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
