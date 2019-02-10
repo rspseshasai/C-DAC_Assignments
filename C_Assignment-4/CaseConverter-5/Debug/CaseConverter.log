@@ -1,0 +1,8 @@
+﻿E:\VS\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CaseConverter.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  pch.cpp
+  CaseConverter.cpp
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\caseconverter\caseconverter.cpp(9): warning C4018: '<': signed/unsigned mismatch
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\caseconverter\caseconverter.cpp(23): warning C4018: '<': signed/unsigned mismatch
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\caseconverter\caseconverter.cpp(44): warning C4101: 's2': unreferenced local variable
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\caseconverter\caseconverter.cpp(44): warning C4101: 's1': unreferenced local variable
+  CaseConverter.vcxproj -> C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C_Assignment-4\Debug\CaseConverter-5.exe

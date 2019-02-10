@@ -1,2 +1,4 @@
 ﻿  Delete-12.cpp
-  Delete-12.vcxproj -> C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C_Assignment-4\Debug\Delete-12.exe
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\delete-12\delete-12.cpp(61): warning C4101: 'k': unreferenced local variable
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\delete-12\delete-12.cpp(88): warning C4018: '<': signed/unsigned mismatch
+  Delete-12.vcxproj -> C:\Users\rspse\Source\Repos\rspseshasai\C-DAC_Assignments\C_Assignment-4\Debug\Delete-12.exe

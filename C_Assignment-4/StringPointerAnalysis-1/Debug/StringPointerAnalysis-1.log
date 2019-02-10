@@ -1,5 +1,0 @@
-﻿E:\VS\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (StringPointerAnalysis-1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  pch.cpp
-  StringPointerAnalysis-1.cpp
-c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\c_assignment-4\stringpointeranalysis-1\stringpointeranalysis-1.cpp(8): warning C4305: 'initializing': truncation from 'double' to 'float'
-  StringPointerAnalysis-1.vcxproj -> C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C_Assignment-4\Debug\StringPointerAnalysis-1,2.exe
