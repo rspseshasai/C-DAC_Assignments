@@ -5,15 +5,15 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CountE's-3", "CountE's-3\CountE's-3.vcxproj", "{259B7E0F-C777-4087-A781-311C1A358587}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CaseConverter", "CaseConverter\CaseConverter.vcxproj", "{91296BC9-438B-4E5E-90D8-3718BE942E53}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CaseConverter-5", "CaseConverter\CaseConverter.vcxproj", "{91296BC9-438B-4E5E-90D8-3718BE942E53}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringRev-6", "StringRev-6\StringRev-6.vcxproj", "{B442D65A-C491-4FB9-959D-2898F8736D15}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DisplayArrOfPointers-8", "DisplayArrOfPointers-8\DisplayArrOfPointers-8.vcxproj", "{9EE72961-B174-45B2-B0BD-5FA5965969F5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringPointerAnalysis-1", "StringPointerAnalysis-1\StringPointerAnalysis-1.vcxproj", "{3872B230-745A-4686-A378-26F6F6BE5A1A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringPointerAnalysis-1,2", "StringPointerAnalysis-1\StringPointerAnalysis-1.vcxproj", "{3872B230-745A-4686-A378-26F6F6BE5A1A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringRotations", "StringRotations\StringRotations.vcxproj", "{789E8F61-6EF2-4C5D-90A9-F49DA7927136}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StringRotations-14", "StringRotations\StringRotations.vcxproj", "{789E8F61-6EF2-4C5D-90A9-F49DA7927136}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Expand-13", "Expand-13\Expand-13.vcxproj", "{E8B0CC37-C51D-4540-A007-ED076F8FEFFA}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "strMatch-9", "strMatch-9\strMatch-9.vcxproj", "{FFD2DC54-0B69-4C4F-AAB1-77F418905D28}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Delete-10", "Delete-10\Delete-10.vcxproj", "{77236181-8B95-4BCF-8E9D-1F1B7E82350B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortStrings", "SortStrings\SortStrings.vcxproj", "{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +133,14 @@ Global
 		{77236181-8B95-4BCF-8E9D-1F1B7E82350B}.Release|x64.Build.0 = Release|x64
 		{77236181-8B95-4BCF-8E9D-1F1B7E82350B}.Release|x86.ActiveCfg = Release|Win32
 		{77236181-8B95-4BCF-8E9D-1F1B7E82350B}.Release|x86.Build.0 = Release|Win32
+		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Debug|x64.ActiveCfg = Debug|x64
+		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Debug|x64.Build.0 = Debug|x64
+		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Debug|x86.ActiveCfg = Debug|Win32
+		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Debug|x86.Build.0 = Debug|Win32
+		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Release|x64.ActiveCfg = Release|x64
+		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Release|x64.Build.0 = Release|x64
+		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Release|x86.ActiveCfg = Release|Win32
+		{D1068BF5-FBB9-4392-ACC0-142EE63CAC9A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
