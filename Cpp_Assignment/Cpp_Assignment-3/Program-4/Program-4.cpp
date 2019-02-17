@@ -6,6 +6,16 @@ using namespace std;
 class Sample
 {
 public:
+	virtual void display()
+	{
+
+	}
+	Sample()
+	{
+		x = 2;
+		y = 3;
+		z = 4;
+	}
 	int x;
 protected:
 	int y;
@@ -13,7 +23,7 @@ private:
 	int z;
 };
 
-class Der : public Sample
+class PubDer : public Sample
 {
 
 public:
@@ -21,47 +31,65 @@ public:
 	{
 		cout << "\nX = " << x;
 		cout << "\nY = " << y;
-		cout << "\nZ = " << z;
+
+		//-------Private member Cannot be accessed-----------//
+		//cout << "\nZ = " << z;
 		cout<< "\n\n";
 	}
-	// x is public
-	// y is protected
-	// z is not accessible from publicDerived
 };
 
-class protectedDerived : protected Sample
+class proDer: protected Sample
 {
 
 public:
 	void display()
 	{
+
+		//---------X and Y are Protected-----------//
 		cout << "\nX = " << x;
 		cout << "\nY = " << y;
-		cout << "\nZ = " << z;
+
+		//-------Private member Cannot be accessed-----------//
+		//cout << "\nZ = " << z;
 		cout << "\n\n";
 	}
-	// x is protected
-	// y is protected
-	// z is not accessible from protectedDerived
+
 };
 
-class privateDerived : private Sample
+class priDer : private Sample
 {
 
 public:
 	void display()
 	{
+
+		//------------X and Y are Private------------------//
 		cout << "\nX = " << x;
 		cout << "\nY = " << y;
-		cout << "\nZ = " << z;
+
+		//-------Private member Cannot be accessed-----------//
+		//cout << "\nZ = " << z;
 		cout << "\n\n";
 	}
-	// x is private
-	// y is private
-	// z is not accessible from privateDerived
 };
 
 int main()
 {
+	Sample *ob;
+	PubDer pu;
+	priDer pri;
+	proDer pro;
+
+	ob = &pu;
+	ob->display();
+
+	//Classes Which are inherited as Private or Public cannot be accessed
+
+	/*ob = &pri;           
+	ob->display();
+
+	ob = &pro;
+	ob->display();*/
+
 	system("pause");
 }
