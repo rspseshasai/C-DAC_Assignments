@@ -29,12 +29,11 @@ class PubDer : public Sample
 public:
 	void display()
 	{
-		cout << "\nX = " << x;
-		cout << "\nY = " << y;
-
+		cout << "\n\tX = " << x;
+		cout << "\n\tY = " << y;
+		cout << "\n";
 		//-------Private member Cannot be accessed-----------//
 		//cout << "\nZ = " << z;
-		cout<< "\n\n";
 	}
 };
 
@@ -51,7 +50,6 @@ public:
 
 		//-------Private member Cannot be accessed-----------//
 		//cout << "\nZ = " << z;
-		cout << "\n\n";
 	}
 
 };
@@ -75,14 +73,30 @@ public:
 
 int main()
 {
+
+	Sample o;
+	cout << "* Creating an object for base class and trying to access members\n";
+	cout<<"\tX = " << o.x<<"\n";
+
+	cout << "\tY and Z cannot be accessed as Y is Protected and Z is Private\n\n";
+
+	//-----------Y and Z cannot be accessed as Y is Protected and Z is Private--------------
+	//cout << o.y<< "\n";
+	//cout << o.z << "\n";
+
+
+	cout << "* Creating an object for Derived classes and trying to access members of base classes\n\n";
 	Sample *ob;
 	PubDer pu;
 	priDer pri;
 	proDer pro;
 
+	cout << "  -> If Derived class is Public";
 	ob = &pu;
 	ob->display();
+	cout << "\tCannot access Z as it is Private (But can access Y as it is protected and so can be used in derived classes)\n\n";
 
+	cout << "  -> If Derived classes are Protected or Private we Cannot Access any Members\n\n";
 	//Classes Which are inherited as Private or Public cannot be accessed
 
 	/*ob = &pri;           
