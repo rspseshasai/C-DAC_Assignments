@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InfixToPostfix", "InfixToPo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PostfixEvaluation", "PostfixEvaluation\PostfixEvaluation.vcxproj", "{8F9B291E-4680-494C-9C9B-25961A00A69F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Queue", "Queue\Queue.vcxproj", "{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{8F9B291E-4680-494C-9C9B-25961A00A69F}.Release|x64.Build.0 = Release|x64
 		{8F9B291E-4680-494C-9C9B-25961A00A69F}.Release|x86.ActiveCfg = Release|Win32
 		{8F9B291E-4680-494C-9C9B-25961A00A69F}.Release|x86.Build.0 = Release|Win32
+		{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}.Debug|x64.ActiveCfg = Debug|x64
+		{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}.Debug|x64.Build.0 = Debug|x64
+		{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}.Debug|x86.ActiveCfg = Debug|Win32
+		{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}.Debug|x86.Build.0 = Debug|Win32
+		{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}.Release|x64.ActiveCfg = Release|x64
+		{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}.Release|x64.Build.0 = Release|x64
+		{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}.Release|x86.ActiveCfg = Release|Win32
+		{D5A594FB-CC48-4B56-96A0-D31D982FCFD3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
