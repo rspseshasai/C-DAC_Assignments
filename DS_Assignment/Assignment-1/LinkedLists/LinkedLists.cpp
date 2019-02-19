@@ -26,9 +26,9 @@ public:
 	int DeleteEnd();
 
 	void DisplayForward();
-	/*void DisplayBack();
+	void DisplayBack();
 
-	void ReverseLL();*/
+	void ReverseLL();
 };
 
 void ll::InsertBegin(int ele)
@@ -173,6 +173,11 @@ int ll::DeleteEnd()
 	return ret;
 }
 
+void ll::ReverseLL()
+{
+	
+}
+
 void ll::DisplayForward()
 {
 	if (first == NULL)
@@ -187,6 +192,21 @@ void ll::DisplayForward()
 		}
 		cout << "NULL\n";
 	}
+}
+
+void print(struct node * curr)
+{
+	if (curr != NULL)
+	{
+		print(curr->next);
+		cout << curr->data << "-->";
+	} 
+}
+void ll::DisplayBack()
+{
+	if (first != NULL)
+		print(first);
+	cout << "NULL\n";
 }
 
 int main()
@@ -259,12 +279,12 @@ int main()
 				obj.DisplayForward();
 			else
 			{
-
+				obj.DisplayBack();
 			}
 			break;
-		/*case 4:
+		case 4:
 			obj.ReverseLL();
-			break;*/
+			break;
 		case 5:
 			exit(0);
 		}
