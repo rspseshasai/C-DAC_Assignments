@@ -124,53 +124,70 @@ void ll::InsertEnd(int ele)
 
 int ll::DeleteBegin()
 {
-	curr = first;
-	int ret = curr->data;
-	first = curr->next;
-	return ret;
+	if (curr != NULL)
+	{
+		int ret = curr->data;
+		first = curr->next;
+		return ret;
+	}
+	else
+		cout << "Empty List\n";
+	return -1;
 }
 
 int ll::DeleteSpecific(int ele)
 {
 	curr = first;
-	int flag = 0;
-	struct node * curr1 = NULL;
-	while (curr != NULL)
-	{
-		if (curr->data == ele)
-		{
-			flag = 1;
-			break;
-		}
-		curr1 = curr;
-		curr = curr->next;
-	}
-	int ret;
-	if (flag == 1)
-	{
-		ret = curr->data;
-		curr1->next = curr->next;
-		curr->next = NULL;
-	}
+	if (curr == NULL)
+		cout << "Empty List\n";
 	else
 	{
-		ret = -1;
-		cout << "Element Not Found\n";
+		int flag = 0;
+		struct node * curr1 = NULL;
+		while (curr != NULL)
+		{
+			if (curr->data == ele)
+			{
+				flag = 1;
+				break;
+			}
+			curr1 = curr;
+			curr = curr->next;
+		}
+		int ret;
+		if (flag == 1)
+		{
+			ret = curr->data;
+			curr1->next = curr->next;
+			curr->next = NULL;
+		}
+		else
+		{
+			ret = -1;
+			cout << "Element Not Found\n";
+		}
+		return ret;
 	}
-	return ret;
+	return -1;
 }
 
 int ll::DeleteEnd()
 {
 	curr = first;
 	int ret;
-	while (curr->next->next != NULL)
+	if (curr == NULL)
+		cout << "List is Empty\n";
+	else
 	{
-		curr = curr->next;
+		while (curr->next->next != NULL)
+		{
+			curr = curr->next;
+		}
+		ret = curr->next->data;
+		curr->next = NULL;
+		return ret;
 	}
-	ret = curr->next->data;
-	curr->next = NULL;
-	return ret;
+	return -1;
 }
 
 void ll::ReverseLL()

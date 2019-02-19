@@ -138,55 +138,73 @@ void dll::InsertEnd(int ele)
 int dll::DeleteBegin()
 {
 	curr = first;
-	int ret = curr->data;
-	first = curr->next;
-	first->prev = NULL;
-	return ret;
+	if (curr == NULL)
+		cout << "Empty List\n";
+	else
+	{
+		int ret = curr->data;
+		first = curr->next;
+		first->prev = NULL;
+		return ret;
+	}
+	return -1;
 }
 
 int dll::DeleteSpecific(int ele)
 {
 	curr = first;
-	int flag = 0;
-	struct node * curr1 = NULL;
-	while (curr != NULL)
-	{
-		if (curr->data == ele)
-		{
-			flag = 1;
-			break;
-		}
-		curr1 = curr;
-		curr = curr->next;
-	}
-	int ret;
-	if (flag == 1)
-	{
-		ret = curr->data;
-		curr1->next = curr->next;
-		curr->next->prev = curr1;
-		curr->next = NULL;
-		curr->prev = NULL;//opt
-	}
+	if (curr == NULL)
+		cout << "Empty List\n";
 	else
 	{
-		ret = -1;
-		cout << "Element Not Found\n";
+		int flag = 0;
+		struct node * curr1 = NULL;
+		while (curr != NULL)
+		{
+			if (curr->data == ele)
+			{
+				flag = 1;
+				break;
+			}
+			curr1 = curr;
+			curr = curr->next;
+		}
+		int ret;
+		if (flag == 1)
+		{
+			ret = curr->data;
+			curr1->next = curr->next;
+			curr->next->prev = curr1;
+			curr->next = NULL;
+			curr->prev = NULL;//opt
+		}
+		else
+		{
+			ret = -1;
+			cout << "Element Not Found\n";
+		}
+		return ret;
 	}
-	return ret;
+	return -1;
 }
 
 int dll::DeleteEnd()
 {
 	curr = first;
-	int ret;
-	while (curr->next->next != NULL)
+	if (curr == NULL)
+		cout << "Empty List\n";
+	else
 	{
-		curr = curr->next;
+		int ret;
+		while (curr->next->next != NULL)
+		{
+			curr = curr->next;
+		}
+		ret = curr->next->data;
+		curr->next = NULL;
+		return ret;
 	}
-	ret = curr->next->data;
-	curr->next = NULL;
-	return ret;
+	return -1;
 }
 
 void dll::ReverseLL()
