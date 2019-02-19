@@ -140,6 +140,7 @@ int dll::DeleteBegin()
 	curr = first;
 	int ret = curr->data;
 	first = curr->next;
+	first->prev = NULL;
 	return ret;
 }
 
@@ -163,7 +164,9 @@ int dll::DeleteSpecific(int ele)
 	{
 		ret = curr->data;
 		curr1->next = curr->next;
+		curr->next->prev = curr1;
 		curr->next = NULL;
+		curr->prev = NULL;//opt
 	}
 	else
 	{
@@ -200,7 +203,7 @@ void dll::DisplayForward()
 		curr = first;
 		while (curr != NULL)
 		{
-			cout << curr->data << "-->";
+			cout << curr->data << "<-->";
 			curr = curr->next;
 		}
 		cout << "NULL\n";
@@ -212,7 +215,7 @@ void print(struct node * curr)
 	if (curr != NULL)
 	{
 		print(curr->next);
-		cout << curr->data << "-->";
+		cout << curr->data << "<-->";
 	}
 }
 void dll::DisplayBack()
@@ -288,6 +291,7 @@ int main()
 			cout << "\n1-DisplayForward  2-DisplayBackward : ";
 			int c2;
 			cin >> c2;
+			cout << "\n";
 			if (c2 == 1)
 				obj.DisplayForward();
 			else
