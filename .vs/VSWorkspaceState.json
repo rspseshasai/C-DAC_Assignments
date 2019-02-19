@@ -1,15 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Cpp_Assignment",
-    "\\Cpp_Assignment\\Cpp_Assignment-3\\Program-1",
-    "\\Cpp_Assignment\\Cpp_Assignment-3\\Program-2",
-    "\\Cpp_Assignment\\Cpp_Assignment-3\\Program-3",
-    "\\Cpp_Assignment\\Cpp_Assignment-3\\Program-4",
-    "\\Cpp_Assignment\\DS_ClassPgms",
-    "\\Cpp_Assignment\\DS_ClassPgms\\InfixToPostfix",
-    "\\Cpp_Assignment\\DS_ClassPgms\\Stack"
+    "\\DS_Assignment",
+    "\\DS_Assignment\\Assignment-1"
   ],
-  "SelectedNode": "\\Cpp_Assignment\\DS_ClassPgms\\InfixToPostfix\\InfixToPostfix.cpp",
+  "SelectedNode": "\\DS_Assignment\\Assignment-1\\Assignment-1.sln",
   "PreviewInSolutionExplorer": false
 }
