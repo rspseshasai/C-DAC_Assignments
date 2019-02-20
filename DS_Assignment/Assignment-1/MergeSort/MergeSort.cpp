@@ -1,28 +1,35 @@
 
 #include "pch.h"
 #include <iostream>
-#include<vector>
 using namespace std;
 
-void mergesort(int arr[], int a, int b)
+void merge(int arr[], int a, int mid, int b)
 {
 
 }
+
+void mergesort(int arr[], int a, int b)
+{
+	if (a < b)
+	{
+		int mid = ((a + b) / 2);
+		mergesort(arr, a, mid);
+		mergesort(arr, mid+1, b);
+		merge(arr, a, mid, b);
+	}
+}
 int main()
 {
-	vector<int >arr;
+	int arr[10];
 	int n;
 	cout << "Enter Size of Array: ";
 	cin >> n;
 	cout << "Enter Array Elements\n";
 	for (int i = 0; i < n; i++)
 	{
-		int ele;
-		cin >> ele;
-		arr.push_back(ele);
+		cin >> arr[i];
 	}
-	mergesort(arr, 0, n / 2);
-	mergesort(arr, (n / 2 + 1), n - 1);
+	mergesort(arr, 0, n-1);
 	system("pause");
 }
 
