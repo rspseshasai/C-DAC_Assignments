@@ -190,13 +190,18 @@ int ll::DeleteEnd()
 		cout << "List is Empty\n";
 	else
 	{
-		while (curr->next->next != NULL)
+		if (curr->next == NULL)
+			cout << "Deleted element is : " << DeleteBegin() << "\n";
+		else
 		{
-			curr = curr->next;
+			while (curr->next->next != NULL)
+			{
+				curr = curr->next;
+			}
+			ret = curr->next->data;
+			curr->next = NULL;
+			return ret;
 		}
-		ret = curr->next->data;
-		curr->next = NULL;
-		return ret;
 	}
 	return -1;
 }
