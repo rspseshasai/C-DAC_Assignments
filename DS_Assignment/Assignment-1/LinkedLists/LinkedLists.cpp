@@ -136,6 +136,7 @@ int ll::DeleteBegin()
 	return -1;
 }
 
+
 int ll::DeleteSpecific(int ele)
 {
 	curr = first;
@@ -159,8 +160,17 @@ int ll::DeleteSpecific(int ele)
 		if (flag == 1)
 		{
 			ret = curr->data;
-			curr1->next = curr->next;
-			curr->next = NULL;
+			if (curr->next != NULL)
+			{
+				curr1->next = curr->next;
+				curr->next = NULL;
+			}
+			else if (curr == first)
+			{
+				curr = NULL;
+				first = NULL;
+			}
+			
 		}
 		else
 		{
@@ -193,7 +203,19 @@ int ll::DeleteEnd()
 
 void ll::ReverseLL()
 {
-	
+	if (first == NULL) 
+		return;
+
+	struct node *prev = NULL, *curr = NULL, *next = NULL;
+	curr = first;
+	while (curr != NULL) {
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+	first = prev;
+
 }
 
 void ll::DisplayForward()

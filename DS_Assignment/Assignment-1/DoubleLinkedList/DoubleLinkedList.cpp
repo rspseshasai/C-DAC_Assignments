@@ -173,12 +173,18 @@ int dll::DeleteSpecific(int ele)
 		if (flag == 1)
 		{
 			ret = curr->data;
-			if(curr->next!=NULL)
+			if (curr->next != NULL)
+			{
 				curr1->next = curr->next;
-			if(curr->next!=NULL)
 				curr->next->prev = curr1;
-			curr->next = NULL;
-			curr->prev = NULL;//opt
+				curr->next = NULL;
+				curr->prev = NULL;//opt
+			}
+			else if (curr == first)
+			{
+				curr = NULL;
+				first = NULL;
+			}
 		}
 		else
 		{
@@ -211,7 +217,18 @@ int dll::DeleteEnd()
 
 void dll::ReverseLL()
 {
+	struct node *temp = first; 
+	first = last; 
+	last = temp; 
+	struct node *p = first; 
 
+	while (p != NULL) 
+	{ 
+		temp = p->next; 
+		p->next = p->prev; 
+		p->prev = temp; 
+		p = p->next;
+	}
 }
 
 void dll::DisplayForward()

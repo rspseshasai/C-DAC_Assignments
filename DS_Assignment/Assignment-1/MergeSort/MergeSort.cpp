@@ -94,6 +94,7 @@ int main()
 	{
 		cin >> arr[i];
 	}
+	cout << "\nAfter Sorting\n";
 	mergesort(arr, 0, n-1);
 	//merge(arr, 0, n / 2, n - 1);
 	print(arr, n);
