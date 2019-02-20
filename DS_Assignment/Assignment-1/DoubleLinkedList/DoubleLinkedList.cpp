@@ -173,8 +173,10 @@ int dll::DeleteSpecific(int ele)
 		if (flag == 1)
 		{
 			ret = curr->data;
-			curr1->next = curr->next;
-			curr->next->prev = curr1;
+			if(curr->next!=NULL)
+				curr1->next = curr->next;
+			if(curr->next!=NULL)
+				curr->next->prev = curr1;
 			curr->next = NULL;
 			curr->prev = NULL;//opt
 		}

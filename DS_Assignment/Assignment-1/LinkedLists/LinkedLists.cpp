@@ -124,6 +124,7 @@ void ll::InsertEnd(int ele)
 
 int ll::DeleteBegin()
 {
+	curr = first;
 	if (curr != NULL)
 	{
 		int ret = curr->data;

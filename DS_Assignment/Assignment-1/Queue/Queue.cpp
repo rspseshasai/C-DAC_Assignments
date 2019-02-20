@@ -26,13 +26,15 @@ void Queue::Enque()
 {
 	try
 	{
-		if (front == n - 1)
+		if (front == n-1)
 			throw front;
 		else
 		{
 			cout << "Enter Data: " << endl;
 			int d;
 			cin >> d;
+			if (front == -1)
+				rear=0;
 			data[++front] = d;
 		}
 	}
@@ -46,11 +48,11 @@ void Queue::Deque()
 {
 	try
 	{
-		if ((rear == -1 && front == -1) || (rear+1 == front))
+		if ((rear == -1 && front == -1) || (front+1 == rear))
 			throw rear;
 		else
 		{
-			//cout << "Dequed Data is: " << data[rear] << "\n";
+			cout << "Dequed Data is: " << data[rear] << "\n";
 			rear++;
 		}
 	}
@@ -65,11 +67,11 @@ void Queue::display()
 {
 	try
 	{
-		if ((rear == -1 && front==-1) || rear+1 == front)
+		if ((rear == -1 && front==-1) || (front + 1 == rear))
 			throw rear;
 		else
 		{
-			for (int i = front; i !=rear; i--)
+			for (int i = front; i >=rear; i--)
 				cout << data[i] << " ";
 			cout << "\n";
 		}
