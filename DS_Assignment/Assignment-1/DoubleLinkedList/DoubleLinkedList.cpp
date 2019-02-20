@@ -29,7 +29,6 @@ public:
 	void DisplayForward();
 	void DisplayBack();
 
-	void ReverseLL();
 };
 
 void dll::InsertBegin(int ele)
@@ -144,7 +143,8 @@ int dll::DeleteBegin()
 	{
 		int ret = curr->data;
 		first = curr->next;
-		first->prev = NULL;
+		if(first!=NULL)
+			first->prev = NULL;
 		return ret;
 	}
 	return -1;
@@ -204,32 +204,22 @@ int dll::DeleteEnd()
 	else
 	{
 		int ret;
-		while (curr->next->next != NULL)
+		if (curr->next == NULL)
+			cout<<"Deleted element is : "<<DeleteBegin()<<"\n";
+		else
 		{
-			curr = curr->next;
+			while (curr->next->next != NULL)
+			{
+				curr = curr->next;
+			}
+			ret = curr->next->data;
+			curr->next = NULL;
+			return ret;
 		}
-		ret = curr->next->data;
-		curr->next = NULL;
-		return ret;
 	}
 	return -1;
 }
 
-void dll::ReverseLL()
-{
-	struct node *temp = first; 
-	first = last; 
-	last = temp; 
-	struct node *p = first; 
-
-	while (p != NULL) 
-	{ 
-		temp = p->next; 
-		p->next = p->prev; 
-		p->prev = temp; 
-		p = p->next;
-	}
-}
 
 void dll::DisplayForward()
 {
@@ -267,7 +257,7 @@ int main()
 	dll obj;
 	while (1)
 	{
-		cout << "\n1-Insert  2-Delete  3-Display  4-Reverse  5-Exit: ";
+		cout << "\n1-Insert  2-Delete  3-Display  4-Exit: ";
 		int ch;
 		cin >> ch;
 		switch (ch)
@@ -336,10 +326,8 @@ int main()
 				obj.DisplayBack();
 			}
 			break;
+
 		case 4:
-			obj.ReverseLL();
-			break;
-		case 5:
 			exit(0);
 		}
 	}
