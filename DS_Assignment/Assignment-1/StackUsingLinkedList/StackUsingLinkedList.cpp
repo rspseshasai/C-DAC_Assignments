@@ -50,6 +50,7 @@ int Stack_ll::Pop()
 	{
 		int ret = curr->data;
 		first = curr->next;
+		free(curr);
 		return ret;
 	}
 	else
@@ -102,6 +103,9 @@ int main()
 			break;
 		case 4:
 			exit(0);
+		default:
+			cout << "Enter Valid Input\n";
+			break;
 		}
 	}
 	system("pause");

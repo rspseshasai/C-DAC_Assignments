@@ -108,6 +108,9 @@ int main()
 		case 4:
 			flag = 1;
 			break;
+		default:
+			cout << "Enter Valid Input\n";
+			break;
 		}
 	}
 	system("pause");

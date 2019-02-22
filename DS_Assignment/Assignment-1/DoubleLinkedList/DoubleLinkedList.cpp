@@ -145,6 +145,7 @@ int dll::DeleteBegin()
 		first = curr->next;
 		if(first!=NULL)
 			first->prev = NULL;
+		free(curr);
 		return ret;
 	}
 	return -1;
@@ -179,11 +180,13 @@ int dll::DeleteSpecific(int ele)
 				curr->next->prev = curr1;
 				curr->next = NULL;
 				curr->prev = NULL;//opt
+				free(curr);
 			}
 			else if (curr == first)
 			{
 				curr = NULL;
 				first = NULL;
+				free(curr);
 			}
 		}
 		else
@@ -214,6 +217,7 @@ int dll::DeleteEnd()
 			}
 			ret = curr->next->data;
 			curr->next = NULL;
+			free(curr);
 			return ret;
 		}
 	}
@@ -288,6 +292,9 @@ int main()
 			case 4:
 				obj.InsertEnd(ele);
 				break;
+			default:
+				cout << "Enter Valid Input\n";
+				break;
 			}
 			break;
 		case 2:
@@ -312,6 +319,9 @@ int main()
 				del1 = obj.DeleteEnd();
 				cout << "Deleted Element is: " << del1 << "\n";
 				break;
+			default:
+				cout << "Enter Valid Input\n";
+				break;
 			}
 			break;
 		case 3:
@@ -329,6 +339,9 @@ int main()
 
 		case 4:
 			exit(0);
+		default:
+			cout << "Enter Valid Input\n";
+			break;
 		}
 	}
 	system("pause");

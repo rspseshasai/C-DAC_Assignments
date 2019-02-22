@@ -113,13 +113,21 @@ void ll::InsertEnd(int ele)
 	temp->data = ele;
 	temp->next = NULL;
 
-	curr = first;
-	while (curr->next != NULL)
+	if (first == NULL)
 	{
-		curr = curr->next;
+		first = temp;
+		first->next = NULL;
 	}
-	curr->next = temp;
-	curr = temp;
+	else
+	{
+		curr = first;
+		while (curr->next != NULL)
+		{
+			curr = curr->next;
+		}
+		curr->next = temp;
+		curr = temp;
+	}
 }
 
 int ll::DeleteBegin()
@@ -129,6 +137,7 @@ int ll::DeleteBegin()
 	{
 		int ret = curr->data;
 		first = curr->next;
+		free(curr);
 		return ret;
 	}
 	else
@@ -164,11 +173,13 @@ int ll::DeleteSpecific(int ele)
 			{
 				curr1->next = curr->next;
 				curr->next = NULL;
+				free(curr);
 			}
 			else if (curr == first)
 			{
 				curr = NULL;
 				first = NULL;
+				free(curr);
 			}
 			
 		}
@@ -200,6 +211,7 @@ int ll::DeleteEnd()
 			}
 			ret = curr->next->data;
 			curr->next = NULL;
+			free(curr);
 			return ret;
 		}
 	}
@@ -290,6 +302,9 @@ int main()
 			case 4:
 				obj.InsertEnd(ele);
 				break;
+			default:
+				cout << "Enter Valid Input\n";
+				break;
 			}
 			break;
 		case 2:
@@ -314,6 +329,9 @@ int main()
 				del1 = obj.DeleteEnd();
 				cout << "Deleted Element is: " << del1 << "\n";
 				break;
+			default:
+				cout << "Enter Valid Input\n";
+				break;
 			}
 			break;
 		case 3:
@@ -332,6 +350,9 @@ int main()
 			break;
 		case 5:
 			exit(0);
+		default:
+			cout << "Enter Valid Input\n";
+			break;
 		}
 	}
 	system("pause");
