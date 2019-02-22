@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergingLinkedLists", "Mergi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PolynomialAddition", "PolynomialAddition\PolynomialAddition.vcxproj", "{72AEF61E-2B21-4099-9F16-99E03C846A40}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearchTree", "BinarySearchTree\BinarySearchTree.vcxproj", "{0C5763AF-B67E-4427-B494-4FB8A223F0DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{72AEF61E-2B21-4099-9F16-99E03C846A40}.Release|x64.Build.0 = Release|x64
 		{72AEF61E-2B21-4099-9F16-99E03C846A40}.Release|x86.ActiveCfg = Release|Win32
 		{72AEF61E-2B21-4099-9F16-99E03C846A40}.Release|x86.Build.0 = Release|Win32
+		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Debug|x64.ActiveCfg = Debug|x64
+		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Debug|x64.Build.0 = Debug|x64
+		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Debug|x86.ActiveCfg = Debug|Win32
+		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Debug|x86.Build.0 = Debug|Win32
+		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Release|x64.ActiveCfg = Release|x64
+		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Release|x64.Build.0 = Release|x64
+		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Release|x86.ActiveCfg = Release|Win32
+		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
