@@ -1,0 +1,6 @@
+﻿  pch.cpp
+  Stack.cpp
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\ds_assignment\assignment-1\stack\stack.cpp(35): warning C4101: 'a': unreferenced local variable
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\ds_assignment\assignment-1\stack\stack.cpp(53): warning C4101: 'a': unreferenced local variable
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\ds_assignment\assignment-1\stack\stack.cpp(73): warning C4101: 'a': unreferenced local variable
+  Stack.vcxproj -> C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\DS_Assignment\Assignment-1\x64\Debug\Stack.exe

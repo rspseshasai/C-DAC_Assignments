@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PolynomialAddition", "Polyn
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearchTree", "BinarySearchTree\BinarySearchTree.vcxproj", "{0C5763AF-B67E-4427-B494-4FB8A223F0DF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DummySample", "DummySample\DummySample.vcxproj", "{CF871C52-956F-440F-8604-E6284E5A0361}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Release|x64.Build.0 = Release|x64
 		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Release|x86.ActiveCfg = Release|Win32
 		{0C5763AF-B67E-4427-B494-4FB8A223F0DF}.Release|x86.Build.0 = Release|Win32
+		{CF871C52-956F-440F-8604-E6284E5A0361}.Debug|x64.ActiveCfg = Debug|x64
+		{CF871C52-956F-440F-8604-E6284E5A0361}.Debug|x64.Build.0 = Debug|x64
+		{CF871C52-956F-440F-8604-E6284E5A0361}.Debug|x86.ActiveCfg = Debug|Win32
+		{CF871C52-956F-440F-8604-E6284E5A0361}.Debug|x86.Build.0 = Debug|Win32
+		{CF871C52-956F-440F-8604-E6284E5A0361}.Release|x64.ActiveCfg = Release|x64
+		{CF871C52-956F-440F-8604-E6284E5A0361}.Release|x64.Build.0 = Release|x64
+		{CF871C52-956F-440F-8604-E6284E5A0361}.Release|x86.ActiveCfg = Release|Win32
+		{CF871C52-956F-440F-8604-E6284E5A0361}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
