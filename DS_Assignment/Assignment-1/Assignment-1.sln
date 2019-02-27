@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearchTree", "BinaryS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DummySample", "DummySample\DummySample.vcxproj", "{CF871C52-956F-440F-8604-E6284E5A0361}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuickSort", "QuickSort\QuickSort.vcxproj", "{127F9EFC-D87F-4B55-8166-1D5671134F15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -151,6 +153,14 @@ Global
 		{CF871C52-956F-440F-8604-E6284E5A0361}.Release|x64.Build.0 = Release|x64
 		{CF871C52-956F-440F-8604-E6284E5A0361}.Release|x86.ActiveCfg = Release|Win32
 		{CF871C52-956F-440F-8604-E6284E5A0361}.Release|x86.Build.0 = Release|Win32
+		{127F9EFC-D87F-4B55-8166-1D5671134F15}.Debug|x64.ActiveCfg = Debug|x64
+		{127F9EFC-D87F-4B55-8166-1D5671134F15}.Debug|x64.Build.0 = Debug|x64
+		{127F9EFC-D87F-4B55-8166-1D5671134F15}.Debug|x86.ActiveCfg = Debug|Win32
+		{127F9EFC-D87F-4B55-8166-1D5671134F15}.Debug|x86.Build.0 = Debug|Win32
+		{127F9EFC-D87F-4B55-8166-1D5671134F15}.Release|x64.ActiveCfg = Release|x64
+		{127F9EFC-D87F-4B55-8166-1D5671134F15}.Release|x64.Build.0 = Release|x64
+		{127F9EFC-D87F-4B55-8166-1D5671134F15}.Release|x86.ActiveCfg = Release|Win32
+		{127F9EFC-D87F-4B55-8166-1D5671134F15}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

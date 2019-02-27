@@ -6,17 +6,17 @@ using namespace std;
 
 int main()
 {
-	//char ch = 'P';
-	//wchar_t wch = L'S';
+	char ch = 'P';
+	wchar_t wch = L'S';
 
-	/*char ar[] = "Normal Char";
+	char ar[] = "Normal Char";
 	wchar_t war[] = L"Wide Char";
 
 	
 	wcout << ch << " " << wch << "\n";
 	wcout << ar << " " << war << "\n"; // We should use wcout to print wide char data types
-	*/
-	/*printf("Char is : %c\n", ch);
+	
+	printf("Char is : %c\n", ch);
 	printf("Char in WideChar is : %c\n", wch);
 
 	printf("String is : %s\n", ar);
@@ -40,7 +40,7 @@ int main()
 		printf("%S is Not Unicode", war);
 
 	cout << "\n\n";
-	*/
+	
 	CHAR ar1[] = "Normal Char";
 	WCHAR war1[] = L"Wide Char";
 
@@ -67,7 +67,7 @@ int main()
 	cout << "\n\n";
 
 
-	/*wchar_t war2[] = TEXT("Wide Char");
+	wchar_t war2[] = TEXT("Wide Char");
 
 	printf("String using TEXT api is : %ws\n", war1);
 
@@ -81,6 +81,70 @@ int main()
 		printf("%S using TEXT api is Not Unicode", war2);
 
 	cout << "\n\n";
-	*/
+
+
+	//MultiByte to WideChar-------------------------------------------------------------------------
+
+	char multi[] = "MultiByte array";
+	int multiSize = strlen(multi);
+	char * multiPtr = multi;
+
+	int rvalue1 = MultiByteToWideChar(CP_UTF8, 0, multiPtr, (multiSize + 1), NULL, 0);
+
+	/*if (rvalue1 == 0)
+		cout << "Conversion to Wchar Failed\n";
+	else
+		cout << "Conversion to Wchar Successful\n";
+		*/
+	wchar_t * wptr = NULL;
+	wptr = new wchar_t[rvalue1];
+
+	if (rvalue1 > 0) // rvalue1 contains size required to store wchar array if succesfull else 0
+	{
+		
+
+		int rvalue2 = MultiByteToWideChar(CP_UTF8, 0, multiPtr, -1, wptr, rvalue1);
+
+		if (rvalue2 == 0)
+			cout << "Conversion to Wchar Failed\n";
+		else
+			cout << "Conversion to Wchar Successful\n";
+
+		printf("String in  Wchar = %S\n", wptr); // now wptr is Unicode format i.e, Widechar
+		//delete wptr;
+	}
+	else
+	{
+		cout << "Conversion Failed\n";
+	}
+
+
+	//WideChar to MultiByte--------------------------------------------------------------------------------
+
+	cout << "\n";
+
+	int rvalue3 = WideCharToMultiByte(CP_UTF8, 0, wptr, -1, NULL, 0, NULL, NULL);
+
+	if (rvalue3 > 0) // rvalue3 contains size required to store MultiByte array if succesfull else 0
+	{
+
+		char * multiPtr1 = NULL;
+		multiPtr1 = new char[rvalue3];
+		int rvalue4 = WideCharToMultiByte(CP_UTF8, 0, wptr, -1, multiPtr1, rvalue3, NULL, NULL);
+
+		if (rvalue4 == 0)
+			cout << "Conversion to MultiByte Failed\n";
+		else
+			cout << "Conversion to MultiByte Successful\n";
+
+		printf("String in  MultiByte = %s\n", multiPtr1); // now multiPtr1 is Ansi format i.e, multibyte
+		//delete wptr;
+	}
+	else
+	{
+		cout << "Conversion Failed\n";
+	}
+	cout << "\n";
+
 	system("pause");
 }
