@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program-8(Events)", "Progra
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program-6(CreateProcess)", "Program-6(CreateProcess)\Program-6(CreateProcess).vcxproj", "{7243D03F-E417-4F7A-81CA-0ADE0CC4BC34}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program-7(Create2ChildProcesses)", "Program-7(Create2ChildProcesses)\Program-7(Create2ChildProcesses).vcxproj", "{655D247A-6D16-40A2-B2B8-3C6F6806A70F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{7243D03F-E417-4F7A-81CA-0ADE0CC4BC34}.Release|x64.Build.0 = Release|x64
 		{7243D03F-E417-4F7A-81CA-0ADE0CC4BC34}.Release|x86.ActiveCfg = Release|Win32
 		{7243D03F-E417-4F7A-81CA-0ADE0CC4BC34}.Release|x86.Build.0 = Release|Win32
+		{655D247A-6D16-40A2-B2B8-3C6F6806A70F}.Debug|x64.ActiveCfg = Debug|x64
+		{655D247A-6D16-40A2-B2B8-3C6F6806A70F}.Debug|x64.Build.0 = Debug|x64
+		{655D247A-6D16-40A2-B2B8-3C6F6806A70F}.Debug|x86.ActiveCfg = Debug|Win32
+		{655D247A-6D16-40A2-B2B8-3C6F6806A70F}.Debug|x86.Build.0 = Debug|Win32
+		{655D247A-6D16-40A2-B2B8-3C6F6806A70F}.Release|x64.ActiveCfg = Release|x64
+		{655D247A-6D16-40A2-B2B8-3C6F6806A70F}.Release|x64.Build.0 = Release|x64
+		{655D247A-6D16-40A2-B2B8-3C6F6806A70F}.Release|x86.ActiveCfg = Release|Win32
+		{655D247A-6D16-40A2-B2B8-3C6F6806A70F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
