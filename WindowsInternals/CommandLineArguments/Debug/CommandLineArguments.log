@@ -1,0 +1,4 @@
+﻿E:\VS\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (CommandLineArguments.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  pch.cpp
+  Program-2(CommandLineArguments).cpp
+  CommandLineArguments.vcxproj -> C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\WindowsInternals\Debug\Program-2(CommandLineArguments).exe
