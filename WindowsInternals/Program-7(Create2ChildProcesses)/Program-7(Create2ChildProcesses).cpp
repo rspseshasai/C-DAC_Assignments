@@ -34,6 +34,8 @@ int main(int argc, TCHAR *argv[])
 		return 0;
 	}
 
+	WaitForSingleObject(pi1.hProcess, INFINITE);
+
 	if (!CreateProcess(TEXT("C:/Users/rspse/Downloads/Winobj.exe"),
 		NULL,
 		NULL,
@@ -49,13 +51,15 @@ int main(int argc, TCHAR *argv[])
 		return 0;
 	}
 
-	DWORD Ids[2];
+	HANDLE Ids[2];
 
-	Ids[0] = pi1.dwProcessId;
-	Ids[1] = pi2.dwProcessId;
+	Ids[0] = pi1.hProcess;
+	Ids[1] = pi2.hProcess;
 
 	for (int i = 0; i < 2; i++)
-		cout << "Process "<<i<<" Id is : " << Ids[i]<<"\n";
+		cout << "Process "<<i<<" Handle is : " << Ids[i]<<"\n";
+
+	WaitForMultipleObjects(2, Ids,TRUE, 5000);
 
 	CloseHandle(pi1.hProcess);
 	CloseHandle(pi1.hThread);
