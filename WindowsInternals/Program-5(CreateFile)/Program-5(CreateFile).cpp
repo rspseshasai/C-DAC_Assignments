@@ -20,14 +20,12 @@ int main()
 
 	//ZeroMemory(FileContent, MAX);
 	char ContentToWrite[MAX] = "Hello This is File-2";
-	bool ok = true;
 	// Check Error While Reading file
 	if (!WriteFile(fileHandle, ContentToWrite, MAX, &dwBytesWrite, NULL))
 	{
 		printf("File Cannot be Written . Error %u", GetLastError());
-		ok = false;
 	}
-
+	CloseHandle(fileHandle);
 	system("pause");
 	return 0;
 }
