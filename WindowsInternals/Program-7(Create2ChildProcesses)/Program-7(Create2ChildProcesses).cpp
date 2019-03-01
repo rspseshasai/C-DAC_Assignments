@@ -19,7 +19,7 @@ int main(int argc, TCHAR *argv[])
 	si2.cb = sizeof(si2);
 	ZeroMemory(&pi2, sizeof(pi2));
 
-	if (!CreateProcess(TEXT("C:/Users/rspse/Downloads/Winobj.exe"),
+	if (!CreateProcess(TEXT("C:/Users/rspse/source/repos/rspseshasai/C-DAC_Assignments/C_Assignment/C_Assignment-1/Calculator-1/Calc.exe"),
 		NULL,
 		NULL,           
 		NULL,           
@@ -56,6 +56,13 @@ int main(int argc, TCHAR *argv[])
 
 	for (int i = 0; i < 2; i++)
 		cout << "Process "<<i<<" Id is : " << Ids[i]<<"\n";
+
+	CloseHandle(pi1.hProcess);
+	CloseHandle(pi1.hThread);
+
+	CloseHandle(pi2.hProcess);
+	CloseHandle(pi2.hThread);
+
 	system("pause");
 	return 0;
 }
