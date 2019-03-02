@@ -80,11 +80,11 @@ void Stack_ll::Display()
 int main()
 {
 	Stack_ll obj;
-	while (1)
+	struct node * current=NULL;
+	cout << "\n1-Push  2-Pop  3-Display  4-Exit: ";
+	int ch;
+	while (cin >> ch)
 	{
-		cout << "\n1-Push  2-Pop  3-Display  4-Exit: ";
-		int ch;
-		cin >> ch;
 		switch(ch)
 		{
 		case 1:
@@ -102,11 +102,18 @@ int main()
 			obj.Display();
 			break;
 		case 4:
+			current = first;
+			while (current != NULL) {
+				struct node * next = current->next;
+				free(current);
+				current = next;
+			}
 			exit(0);
 		default:
 			cout << "Enter Valid Input\n";
 			break;
 		}
+		cout << "\n1-Push  2-Pop  3-Display  4-Exit: ";
 	}
 	system("pause");
 }

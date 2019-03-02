@@ -2,13 +2,14 @@
 
 #include "pch.h"
 #include <iostream>
+#define MAX 5
 using namespace std;
 
 template<class t>
 
 class Stack
 {
-	t data[5];
+	t data[MAX];
 	int top;
 public:
 	Stack()
@@ -25,7 +26,7 @@ void Stack<t>::push()
 {
 	try
 	{
-		if (top == 4)
+		if (top == MAX-1)
 			throw top;
 		else
 		{

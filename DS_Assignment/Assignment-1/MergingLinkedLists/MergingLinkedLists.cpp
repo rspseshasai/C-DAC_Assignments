@@ -124,6 +124,31 @@ int main()
 
 	DisplayForward(temp);
 
+	//---------------free memory-------------------------
+	struct node * current = temp;
+	while (current != NULL) {
+		struct node * next = current->next;
+		free(current);
+		current = next;
+	}
+
+	current = first2;
+	while (current != NULL) {
+		struct node * next = current->next;
+		free(current);
+		current = next;
+	}
+
+	current = first1;
+	while (current != NULL) {
+		struct node * next = current->next;
+		free(current);
+		current = next;
+	}
+
+
+
+	//----------------------------------------------------
 	system("pause");
 }
 

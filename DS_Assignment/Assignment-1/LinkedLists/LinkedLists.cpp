@@ -269,11 +269,11 @@ void ll::DisplayBack()
 int main()
 {
 	ll obj;
-	while (1)
+	struct node * current = NULL;
+	cout << "\n1-Insert  2-Delete  3-Display  4-Reverse  5-Exit: ";
+	int ch;
+	while ((cin >> ch))
 	{
-		cout << "\n1-Insert  2-Delete  3-Display  4-Reverse  5-Exit: ";
-		int ch;
-		cin >> ch;
 		switch (ch)
 		{
 		case 1:
@@ -349,11 +349,18 @@ int main()
 			obj.ReverseLL();
 			break;
 		case 5:
+			current = first;
+			while (current != NULL) {
+				struct node * next = current->next;
+				free(current);
+				current = next;
+			}
 			exit(0);
 		default:
 			cout << "Enter Valid Input\n";
 			break;
 		}
+		cout << "\n1-Insert  2-Delete  3-Display  4-Reverse  5-Exit: ";
 	}
 	system("pause");
 }

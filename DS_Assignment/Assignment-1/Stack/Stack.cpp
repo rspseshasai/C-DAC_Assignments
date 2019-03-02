@@ -1,10 +1,11 @@
 #include "pch.h"
 #include <iostream>
+#define MAX 50
 using namespace std;
 
 class Stack
 {
-	int data[50], n;
+	int data[MAX], n;
 	int top;
 public:
 	Stack()
