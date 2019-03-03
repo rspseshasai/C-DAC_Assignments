@@ -151,11 +151,13 @@ int ll::DeleteSpecific(int ele)
 	curr = first;
 	if (curr == NULL)
 		cout << "Empty List\n";
+	else if (curr->data == ele)
+		cout << "Deleted Element is : " << DeleteBegin();
 	else
 	{
 		int flag = 0;
 		struct node * curr1 = NULL;
-		while (curr != NULL)
+		while (curr->next != NULL)
 		{
 			if (curr->data == ele)
 			{
@@ -165,6 +167,9 @@ int ll::DeleteSpecific(int ele)
 			curr1 = curr;
 			curr = curr->next;
 		}
+		//cout << "curr data : " << curr->data << "\n";
+		if (curr->data == ele)
+			return DeleteEnd();
 		int ret;
 		if (flag == 1)
 		{
@@ -195,26 +200,21 @@ int ll::DeleteSpecific(int ele)
 
 int ll::DeleteEnd()
 {
-	curr = first;
-	int ret;
-	if (curr == NULL)
-		cout << "List is Empty\n";
-	else
+	if (first == NULL)
+		return NULL;
+	if (first->next == NULL)
 	{
-		if (curr->next == NULL)
-			cout << "Deleted element is : " << DeleteBegin() << "\n";
-		else
-		{
-			while (curr->next->next != NULL)
-			{
-				curr = curr->next;
-			}
-			ret = curr->next->data;
-			curr->next = NULL;
-			free(curr);
-			return ret;
-		}
+		delete first;
+		return NULL;
 	}
+	struct node * temp = first;
+	while (temp->next->next != NULL)
+		temp = temp->next;
+	int ret = temp->next->data;
+	delete (temp->next);
+	temp->next = NULL;
+
+	return ret;
 	return -1;
 }
 
