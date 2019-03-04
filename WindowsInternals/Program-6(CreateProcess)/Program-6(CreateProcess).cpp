@@ -20,6 +20,8 @@ int main()
 	if (0 == retValue)
 		cout << "Process not Created "<<GetLastError()<<"\n";
 
+	CloseHandle(processInfo.hProcess);
+	CloseHandle(processInfo.hThread);
 	system("pause");
 	return 0;
 }

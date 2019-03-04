@@ -5,7 +5,12 @@ using namespace std;
 
 DWORD WINAPI Fnc(LPVOID var)
 {
-	cout << "Hello Thread\n";
+	//cout << "Hello Thread\n";
+	for (int i = 1; i <= 10; i++)
+	{
+		cout << i << "\n";
+		Sleep(1000);
+	}
 	return 0;
 }
 
@@ -22,7 +27,7 @@ int main(int argc, TCHAR *argv[])
 	//resume thread
 
 	DWORD resume = ResumeThread(threadHandle);
-
+	WaitForSingleObject(threadHandle, INFINITE);
 	system("pause");
 	return 0;
 }

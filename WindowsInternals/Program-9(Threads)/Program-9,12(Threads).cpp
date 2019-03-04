@@ -18,6 +18,7 @@ int main(int argc, TCHAR *argv[])
 		cout << "Error in Creating Thread : " << GetLastError() << "\n";
 	}
 	WaitForSingleObject(threadHandle, INFINITE);
+
 	cout << "CurrentProcessId is : " << GetCurrentProcessId() << "\n";
 	cout << "CurrentThreadId is : " << GetCurrentThreadId() << "\n";
 	cout << "ProcessId is : " << GetProcessId << "\n";
