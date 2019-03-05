@@ -5,11 +5,16 @@ using namespace std;
 
 DWORD WINAPI Fnc(LPVOID var)
 {
-	cout << "Thread\n";
+	for (int i = 1010101; i < 1010105; i++)
+	{
+		cout << i << "\n";
+		Sleep(1000);
+	}
 	DWORD dwExitCode = 0;
 	ExitThread(dwExitCode);
 	return 0;
 }
+
 
 int main(int argc, TCHAR *argv[])
 {
@@ -20,7 +25,7 @@ int main(int argc, TCHAR *argv[])
 		cout << "Error in Creating Thread : " << GetLastError() << "\n";
 	}
 	DWORD dwExitCode = 0;
-	//Sleep(5000);	
+	Sleep(100);	
 	//WaitForSingleObject(threadHandle, INFINITE);
 	BOOL TerminateStatus = TerminateThread(threadHandle, dwExitCode);
 

@@ -12,7 +12,6 @@ DWORD WINAPI Fnc(LPVOID var)
 	cout << "Thread Created Successfully\n";
 	return 0;
 }
-
 int main()
 {
 	ZeroMemory(&startInfo, sizeof(startInfo));
