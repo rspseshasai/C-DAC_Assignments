@@ -14,9 +14,8 @@ DWORD WINAPI thread1Fnc(LPVOID var)
 		c++;
 		cout<<"Value of C in threadFnc1 is : "<<c<<"\n";
 	}
-
 	return 0;
-}
+}	
 DWORD WINAPI thread2Fnc(LPVOID var)
 {
 	for (int i = 0; i < 10; i++)
