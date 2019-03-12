@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  Enter Something : <input type="text" id="text1" onclick="Func()"/>
+
+  <button id="btn">Click to Print</button>
+
+  <p id="addEvent"></p>
+
+  <script>
+    function Func(){
+      document.getElementById("btn").addEventListener("click", function(){
+        var val = document.getElementById("text1").value;
+        document.getElementById("addEvent").innerHTML = val;
+      });
+    }
+  </script>
+
+  </body>
+</html>
