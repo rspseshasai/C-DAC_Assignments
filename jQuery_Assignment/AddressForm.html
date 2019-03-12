@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+
+   <script src="jquery-3.3.1.js"></script>
+   <title>AutoFill AddressForm</title>
+
+  </head>
+
+  <body>
+
+    <h2> Residential Address</h2>
+      <form action="#" method="post" enctype="">
+     <pre>
+       <label for="residential_HouseNo">HouseNo</label>   <input type="text" placeholder="Enter HouseNo" name="residential_HouseNo" id="residential_HouseNo"></input>
+
+       <label for="residential_Locality">Locality</label>  <input type="text" placeholder="Enter Locality" name="residential_Locality" id="residential_Locality"></input>
+
+       <label for="residential_Mandal">Mandal</label>    <input type="text" placeholder="Enter Mandal" name="residential_Mandal" id="residential_Mandal"></input>
+
+       <label for="residential_State">State</label>     <input type="text" placeholder="Enter State" name="residential_State" id="residential_State"></input>
+
+       <label for="residential_pin">Pin code</label>  <input type="text" placeholder="Enter Pincode" name="residential_pin" id="residential_pin"/>
+</pre>
+
+     <h2> Permanent Address</h2>
+
+     <pre>
+      <label for="same_residential_permanent">To copy same address for permanent address</label> <input type="checkbox" id="same_residential_permanent" />
+
+       <label for="permanent_HouseNo">HouseNo</label>   <input type="text" placeholder="Enter HouseNo" name="permanent_HouseNo" id="permanent_HouseNo"></input>
+
+       <label for="permanent_Locality">Locality</label>  <input type="text" placeholder="Enter Locality" name="permanent_Locality" id="permanent_Locality"></input>
+
+       <label for="permanent_Mandal">Mandal</label>    <input type="text" placeholder="Enter Mandal" name="permanent_Mandal" id="permanent_Mandal"></input>
+
+       <label for="permanent_State">State</label>     <input type="text" placeholder="Enter State" name="permanent_State" id="permanent_State"></input>
+
+       <label for="permanent_pin">Pin code</label>  <input type="text" placeholder="Enter Pincode" name="permanent_pin" id="permanent_pin"/>
+     </pre>
+
+   </form>
+
+
+<script>
+$("#same_residential_permanent").click(function()
+{
+  if($(this).is(":checked")){
+      $("#permanent_HouseNo").val($("#residential_HouseNo").val());
+      $("#permanent_Locality").val($("#residential_Locality").val());
+      $("#permanent_Mandal").val($("#residential_Mandal").val());
+      $("#permanent_State").val($("#residential_State").val());
+      $("#permanent_pin").val($("#residential_pin").val());
+  }
+});
+</script>
+
+  </body>
+
+  </html>
