@@ -73,68 +73,41 @@ void mulComplex(Complex c1, Complex c2)
 //	cin >> num;
 //}
 
-
+int TestInput(int inp)
+{
+	while (1)
+	{
+		if (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Invalid Input...Enter Again !!" << endl;
+			cin >> inp;
+		}
+		if (!cin.fail())
+			break;
+	}
+	return inp;
+}
 
 int main()
 {
 	int real_1 = 0, real_2 = 0, img_1 = 0, img_2 = 0;
 	cout << "Enter Real Part of Number 1 : ";
 	cin >> real_1;
-	while (1)
-	{
-		if (cin.fail())
-		{
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Invalid Input...Enter Again !!" << endl;
-			cin >> real_1;
-		}
-		if (!cin.fail())
-			break;
-	}
+	real_1 = TestInput(real_1);
+
 	cout << "Enter Imaginary Part of Number 1 : ";
 	cin >> img_1;
-	while (1)
-	{
-		if (cin.fail())
-		{ 
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Invalid Input...Enter Again !!" << endl;
-			cin >> img_1;
-		}
-		if (!cin.fail())
-			break;
-	}
+	img_1 = TestInput(img_1);
 
 	cout << "\nEnter Real Part of Number 2 : ";
 	cin >> real_2;
-	while (1)
-	{
-		if (cin.fail())
-		{
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Invalid Input...Enter Again !!" << endl;
-			cin >> real_2;
-		}
-		if (!cin.fail())
-			break;
-	}
+	real_2 = TestInput(real_2);
+
 	cout << "Enter Imaginary Part of Number 1 : ";
 	cin >> img_2;
-	while (1)
-	{
-		if (cin.fail())
-		{
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Invalid Input...Enter Again !!" << endl;
-			cin >> img_2;
-		}
-		if (!cin.fail())
-			break;
-	}
+	img_2 = TestInput(img_2);
 
 	cout << "\n";
 	Complex Object1(real_1, img_1);

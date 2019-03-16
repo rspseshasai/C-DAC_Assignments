@@ -1,0 +1,12 @@
+﻿  Program-2.cpp
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(39): warning C4101: 'a': unreferenced local variable
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(26): note: while compiling class template member function 'void Stack<int>::push(void)'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(127): note: see reference to function template instantiation 'void Stack<int>::push(void)' being compiled
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(111): note: see reference to class template instantiation 'Stack<int>' being compiled
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(58): warning C4101: 'a': unreferenced local variable
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(47): note: while compiling class template member function 'void Stack<int>::pop(void)'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(130): note: see reference to function template instantiation 'void Stack<int>::pop(void)' being compiled
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(78): warning C4101: 'a': unreferenced local variable
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(66): note: while compiling class template member function 'void Stack<int>::display(void)'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(133): note: see reference to function template instantiation 'void Stack<int>::display(void)' being compiled
+  Program-2.vcxproj -> C:\Users\rspse\Source\Repos\rspseshasai\C-DAC_Assignments\Cpp_Assignment\Cpp_Assignment-3\x64\Debug\Program-2.exe

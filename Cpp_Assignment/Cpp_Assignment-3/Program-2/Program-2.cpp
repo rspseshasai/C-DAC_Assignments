@@ -2,14 +2,14 @@
 
 #include "pch.h"
 #include <iostream>
-#define MAX 5
+#define SIZE 5
 using namespace std;
 
 template<class t>
 
 class Stack
 {
-	t data[MAX];
+	t data[SIZE];
 	int top;
 public:
 	Stack()
@@ -26,7 +26,7 @@ void Stack<t>::push()
 {
 	try
 	{
-		if (top == MAX-1)
+		if (top == SIZE -1)
 			throw top;
 		else
 		{
@@ -81,67 +81,97 @@ void Stack<t>::display()
 	}
 }
 
+int TestInput(int inp)
+{
+	while (1)
+	{
+		if (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Invalid Input...Enter Again !!" << endl;
+			cin >> inp;
+		}
+		if (!cin.fail())
+			break;
+	}
+	return inp;
+}
 
 int main()
 {
-	//cout << "1-Int\n2-Float\n";
-	//int ch;
-	//cin >> ch;
-	//switch (ch)
-	//{
-	//case 1:
-		Stack<int >s;
-		cout << "For Integer Stack\n\n";
-		int flag = 0;
-		while (flag!=1)
-		{
-			
-			cout << "1-push  2-pop  3-display 4-exit\n";
-			int c;
-			cin >> c;
-			switch (c)
-			{
-			case 1:
-				s.push();
-				break;
-			case 2:
-				s.pop();
-				break;
-			case 3:
-				s.display();
-				break;
-			case 4:
-				flag = 1;
-				break;
-			}
-		}
+	while (1)
+	{
+		cout << "1-Integer Stack   2-Float Stack   3-Exit\n";
 
-	//case 2:
-		flag = 0;
-		Stack<float >s1;
-		cout << "For Float Stack\n\n";
-		while (flag!=1)
+		int dataType, flag = 0;
+		cin >> dataType;
+		dataType = TestInput(dataType);
+
+		Stack<int >Obj_Int;
+		Stack<float >Obj_Float;
+		int operation;
+
+		switch (dataType)
 		{
-			cout << "1-push  2-pop  3-display 4-exit\n";
-			int c1;
-			cin >> c1;
-			switch (c1)
+		case 1:
+			while (flag != 1)
 			{
-			case 1:
-				s1.push();
-				break;
-			case 2:
-				s1.pop();
-				break;
-			case 3:
-				s1.display();
-				break;
-			case 4:
-				flag = 1;
-				exit(0);
+
+				cout << "1-Push  2-Pop  3-Display 4-Exit\n";
+				cin >> operation;
+				operation = TestInput(operation);
+				switch (operation)
+				{
+				case 1:
+					Obj_Int.push();
+					break;
+				case 2:
+					Obj_Int.pop();
+					break;
+				case 3:
+					Obj_Int.display();
+					break;
+				case 4:
+					flag = 1;
+					break;
+				default:
+					cout << "Enter Valid Input between (1-4)\n\n";
+				}
 			}
+			break;
+		case 2:
+			while (flag != 1)
+			{
+				cout << "1-Push  2-Pop  3-Display 4-Exit\n";
+				cin >> operation;
+				operation = TestInput(operation);
+				switch (operation)
+				{
+				case 1:
+					Obj_Float.push();
+					break;
+				case 2:
+					Obj_Float.pop();
+					break;
+				case 3:
+					Obj_Float.display();
+					break;
+				case 4:
+					flag = 1;
+					break;
+				default:
+					cout << "Enter Valid Input between (1-4)\n\n";
+				}
+			}
+			break;
+		case 3:
+			exit(0);
+		default:
+			cout << "Enter Valid input between (1-3)\n\n";
+			break;
 		}
-	//}
+	}
 	system("pause");
 }
 
