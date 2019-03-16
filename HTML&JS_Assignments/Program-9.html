@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<body>
+  <p id="p1"> Hi...U r in the right place to know ur website's loading speed </p>
+</br>
+  <button type="button" onclick="getLoadTime()">Get Loading Speed</button>
+</br>
+</br>
+</br>
+  Loading Speed: <span id = "display_Speed"></span>
+
+  </body>
+<script>
+
+
+function getLoadTime(){
+  var loadTime = window.performance.timing.domContentLoadedEventEnd- window.performance.timing.navigationStart;
+  display_Speed.innerHTML= loadTime/1000 + " secs";
+}
+</script>
+
+</html>

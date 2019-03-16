@@ -1,0 +1,22 @@
+<head>
+<script src="jquery-3.3.1.js"></script>
+
+<title>Append</title>
+</head>
+<body>
+<p id = "Para">Hello</p>
+
+<pre>Enter Text To Be Appended <input type="text" id="TextToBeAppended"></input>
+
+<label >Click to append</label> <input type="checkbox" id="button1" />
+</pre>
+<script>
+
+  $("#button1").click(function() {
+  $("#Para").append(" "+$("#TextToBeAppended").val());
+  });
+
+</script>
+
+
+</body>
