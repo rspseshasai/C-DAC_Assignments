@@ -63,6 +63,12 @@ public:
 		return temp;
 	}
 	friend ostream & operator<< (ostream &cout, Complex ob);
+
+	void operator=(Complex &ob) 
+	{
+		real = ob.real;
+		img = ob.img;
+	}
 };
 
 
@@ -83,11 +89,15 @@ int main()
 	Complex ob();
 	Complex ob1(2, 3);
 	Complex ob2(ob1);
+	Complex ob3(6, 9);
 	cout<<"+ binary overload: " << ob1 + ob2;
 	cout<<"- binary overload: " << ob1 - ob2;
 	cout<<"- unary overload: " << -ob1;
 	cout<<"prefix overload: "<< ++ob1;
 	cout <<"postfix overload: "<< ob1++;
+	cout << "Before Assignment overload object1 is : " << ob1;
+	ob1 =ob3;
+	cout << "After Assignment overload object1 is : " << ob1;
 	system("pause");
 	return 0;
 

@@ -22,13 +22,29 @@ public:
 		real = v1;
 		img = v2;
 	}
+	void display(Complex c1, Complex c2)
+	{
+		if(c1.img>0)
+			cout << "First Complex Number is : " << c1.real << "+" << c1.img << "i\n";
+		else
+			cout << "First Complex Number is : " << c1.real << c1.img << "i\n";
+
+		if (c2.img > 0)
+			cout << "First Complex Number is : " << c2.real << "+" << c2.img << "i\n";
+		else
+			cout << "First Complex Number is : " << c2.real << c2.img << "i\n";
+	}
+
 	friend void addComplex(Complex, Complex);
 	friend void mulComplex(Complex, Complex);
 };
 
 void addComplex(Complex c1, Complex c2)
 {
-	cout << "Addition of two complex numbers: " << c1.real + c2.real << "+" << c1.img + c2.img << "i\n";
+	if (c1.img + c2.img < 0)
+		cout << "Addition of two complex numbers: " << c1.real + c2.real << c1.img + c2.img << "i\n";
+	else
+		cout << "Addition of two complex numbers: " << c1.real + c2.real << "+" << c1.img + c2.img << "i\n";
 }
 
 
@@ -37,24 +53,96 @@ void addComplex(Complex c1, Complex c2)
 // 10 + 14i + 15i + 21(-1)
 // 10-21 + 29i
 // 29i - 11
+// (3-6i)*(4-9i)
 
 void mulComplex(Complex c1, Complex c2)
 {
-	cout << "Multiplication of two complex numbers: " << ((c1.real * c2.real) - (c1.img * c2.img)) << "+" << ((c1.real * c2.img) + (c1.img * c2.real)) << "i\n";
+	if(((c1.real * c2.img) + (c1.img * c2.real)) < 0)
+		cout << "Multiplication of two complex numbers: " << ((c1.real * c2.real) - (c1.img * c2.img)) << ((c1.real * c2.img) + (c1.img * c2.real)) << "i\n";
+
+	else
+		cout << "Multiplication of two complex numbers: " << ((c1.real * c2.real) - (c1.img * c2.img)) << "+" << ((c1.real * c2.img) + (c1.img * c2.real)) << "i\n";
 }
+
+
+//while (!cin)
+//{
+//	cout << "Invalid";
+//	cin.clear();
+//	cin.ignore();
+//	cin >> num;
+//}
+
+
 
 int main()
 {
-	int r1, r2, i1, i2;
-	cout << "Enter Real & Imaginary of Number 1: ";
-	cin >> r1 >> i1;
-	cout << "Enter Real & Imaginary of Number 2: ";
-	cin >> r2 >> i2;
-	Complex c1(r1, i1);
-	Complex c2(r2, i2);
-	addComplex(c1, c2);
-	mulComplex(c1, c2);
+	int real_1 = 0, real_2 = 0, img_1 = 0, img_2 = 0;
+	cout << "Enter Real Part of Number 1 : ";
+	cin >> real_1;
+	while (1)
+	{
+		if (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Invalid Input...Enter Again !!" << endl;
+			cin >> real_1;
+		}
+		if (!cin.fail())
+			break;
+	}
+	cout << "Enter Imaginary Part of Number 1 : ";
+	cin >> img_1;
+	while (1)
+	{
+		if (cin.fail())
+		{ 
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Invalid Input...Enter Again !!" << endl;
+			cin >> img_1;
+		}
+		if (!cin.fail())
+			break;
+	}
+
+	cout << "\nEnter Real Part of Number 2 : ";
+	cin >> real_2;
+	while (1)
+	{
+		if (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Invalid Input...Enter Again !!" << endl;
+			cin >> real_2;
+		}
+		if (!cin.fail())
+			break;
+	}
+	cout << "Enter Imaginary Part of Number 1 : ";
+	cin >> img_2;
+	while (1)
+	{
+		if (cin.fail())
+		{
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << "Invalid Input...Enter Again !!" << endl;
+			cin >> img_2;
+		}
+		if (!cin.fail())
+			break;
+	}
+
+	cout << "\n";
+	Complex Object1(real_1, img_1);
+	Complex Object2(real_2, img_2);
+	Object1.display(Object1, Object2);
+	cout << "\n";
+	addComplex(Object1, Object2);
+	mulComplex(Object1, Object2);
+	cout << "\n";
 	system("pause");
 }
-
-
