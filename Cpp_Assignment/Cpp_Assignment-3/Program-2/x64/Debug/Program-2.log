@@ -1,12 +1,51 @@
 ﻿  Program-2.cpp
-c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(39): warning C4101: 'a': unreferenced local variable
-  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(26): note: while compiling class template member function 'void Stack<int>::push(void)'
-  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(127): note: see reference to function template instantiation 'void Stack<int>::push(void)' being compiled
-  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(111): note: see reference to class template instantiation 'Stack<int>' being compiled
-c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(58): warning C4101: 'a': unreferenced local variable
-  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(47): note: while compiling class template member function 'void Stack<int>::pop(void)'
-  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(130): note: see reference to function template instantiation 'void Stack<int>::pop(void)' being compiled
-c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(78): warning C4101: 'a': unreferenced local variable
-  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(66): note: while compiling class template member function 'void Stack<int>::display(void)'
-  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(133): note: see reference to function template instantiation 'void Stack<int>::display(void)' being compiled
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(93): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(42): warning C4101: 'a': unreferenced local variable
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(30): note: while compiling class template member function 'void Stack<int>::push(t)'
+          with
+          [
+              t=int
+          ]
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(187): note: see reference to function template instantiation 'void Stack<int>::push(t)' being compiled
+          with
+          [
+              t=int
+          ]
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(165): note: see reference to class template instantiation 'Stack<int>' being compiled
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(61): warning C4101: 'a': unreferenced local variable
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(50): note: while compiling class template member function 'void Stack<int>::pop(void)'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(190): note: see reference to function template instantiation 'void Stack<int>::pop(void)' being compiled
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(81): warning C4101: 'a': unreferenced local variable
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(69): note: while compiling class template member function 'void Stack<int>::display(void)'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(193): note: see reference to function template instantiation 'void Stack<int>::display(void)' being compiled
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(150): warning C4244: 'return': conversion from 'float' to 't', possible loss of data
+          with
+          [
+              t=int
+          ]
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(126): note: while compiling class template member function 't Stack<t>::get_input(void)'
+          with
+          [
+              t=int
+          ]
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(170): note: see reference to function template instantiation 't Stack<t>::get_input(void)' being compiled
+          with
+          [
+              t=int
+          ]
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(154): warning C4244: 'return': conversion from 'int' to 't', possible loss of data
+          with
+          [
+              t=float
+          ]
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(126): note: while compiling class template member function 't Stack<t>::get_input(void)'
+          with
+          [
+              t=float
+          ]
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-3\program-2\program-2.cpp(213): note: see reference to function template instantiation 't Stack<t>::get_input(void)' being compiled
+          with
+          [
+              t=float
+          ]
   Program-2.vcxproj -> C:\Users\rspse\Source\Repos\rspseshasai\C-DAC_Assignments\Cpp_Assignment\Cpp_Assignment-3\x64\Debug\Program-2.exe

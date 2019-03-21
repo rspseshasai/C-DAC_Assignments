@@ -73,41 +73,83 @@ void mulComplex(Complex c1, Complex c2)
 //	cin >> num;
 //}
 
-int TestInput(int inp)
+//-------------------------------------Validate Input
+bool input_valid(string s)
 {
-	while (1)
+	int i, length_s;
+	bool is_valid = true;
+
+	length_s = s.length();
+
+	if (length_s == 0)
+		is_valid = false;
+	else
 	{
-		if (cin.fail())
+		if (length_s == 1)
 		{
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Invalid Input...Enter Again !!" << endl;
-			cin >> inp;
+			if (!isdigit(s[0]))
+				is_valid = false;
 		}
-		if (!cin.fail())
-			break;
+		else
+		{
+			if (s[0] == '+' || s[0] == '-' || isdigit(s[0]) != 0)
+			{
+				for (i = 1; i < length_s; i++)
+				{
+					if (!isdigit(s[i]))
+					{
+						if (s[i] != '.')
+							is_valid = false;
+					}
+				}
+			}
+			else
+				is_valid = false;
+		}
 	}
-	return inp;
+	return is_valid;
 }
+
+
+
+int get_input()
+{
+	int int_number, check_float = 0;
+	string number;
+	bool is_valid = true;
+
+	do {
+		getline(cin, number);
+		cout << "\n";
+
+		is_valid = input_valid(number);
+
+		if (is_valid == false)
+			cout << "Invalid Input...Enter again\n" << endl;
+	} while (is_valid == false);
+
+	int_number = stoi(number);
+
+	return int_number;
+}
+
+//-------------------------------------------------------------------
 
 int main()
 {
 	int real_1 = 0, real_2 = 0, img_1 = 0, img_2 = 0;
 	cout << "Enter Real Part of Number 1 : ";
-	cin >> real_1;
-	real_1 = TestInput(real_1);
+	real_1 = get_input();
 
 	cout << "Enter Imaginary Part of Number 1 : ";
-	cin >> img_1;
-	img_1 = TestInput(img_1);
+
+	img_1 = get_input();
 
 	cout << "\nEnter Real Part of Number 2 : ";
-	cin >> real_2;
-	real_2 = TestInput(real_2);
+	real_2 = get_input();
 
-	cout << "Enter Imaginary Part of Number 1 : ";
-	cin >> img_2;
-	img_2 = TestInput(img_2);
+	cout << "Enter Imaginary Part of Number 2 : ";
+	img_2 = get_input();
 
 	cout << "\n";
 	Complex Object1(real_1, img_1);

@@ -1,0 +1,7 @@
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\NamedParameters\bin\Debug\NamedParameters.exe.config
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\NamedParameters\bin\Debug\NamedParameters.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\NamedParameters\bin\Debug\NamedParameters.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\NamedParameters\obj\Debug\NamedParameters.csprojAssemblyReference.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\NamedParameters\obj\Debug\NamedParameters.csproj.CoreCompileInputs.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\NamedParameters\obj\Debug\NamedParameters.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\NamedParameters\obj\Debug\NamedParameters.pdb

@@ -1,0 +1,6 @@
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ParamValues\bin\Debug\ParamValues.exe.config
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ParamValues\bin\Debug\ParamValues.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ParamValues\bin\Debug\ParamValues.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ParamValues\obj\Debug\ParamValues.csproj.CoreCompileInputs.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ParamValues\obj\Debug\ParamValues.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ParamValues\obj\Debug\ParamValues.pdb

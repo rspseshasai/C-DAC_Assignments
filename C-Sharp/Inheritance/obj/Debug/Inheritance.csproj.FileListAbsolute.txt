@@ -1,0 +1,6 @@
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Inheritance\obj\Debug\Inheritance.csproj.CoreCompileInputs.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Inheritance\bin\Debug\Inheritance.exe.config
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Inheritance\bin\Debug\Inheritance.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Inheritance\bin\Debug\Inheritance.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Inheritance\obj\Debug\Inheritance.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Inheritance\obj\Debug\Inheritance.pdb

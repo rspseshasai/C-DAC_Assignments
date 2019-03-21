@@ -1,0 +1,6 @@
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ConsoleApp-2\bin\Debug\ConsoleApp-2.exe.config
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ConsoleApp-2\bin\Debug\ConsoleApp-2.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ConsoleApp-2\bin\Debug\ConsoleApp-2.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ConsoleApp-2\obj\Debug\ConsoleApp-2.csproj.CoreCompileInputs.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ConsoleApp-2\obj\Debug\ConsoleApp-2.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ConsoleApp-2\obj\Debug\ConsoleApp-2.pdb

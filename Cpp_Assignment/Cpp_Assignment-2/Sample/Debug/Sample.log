@@ -1,0 +1,23 @@
+﻿  Sample.cpp
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(121): warning C4326: return type of 'main' should be 'int' instead of 'void'
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(92): warning C4477: 'scanf' : format string '%[^\n]' requires an argument of type 'char *', but variadic argument 1 has type 'T'
+          with
+          [
+              T=int
+          ]
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(82): note: while compiling class template member function 'void Stack<int>::read(int)'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(134): note: see reference to function template instantiation 'void Stack<int>::read(int)' being compiled
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(130): note: see reference to class template instantiation 'Stack<int>' being compiled
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(92): warning C4477: 'scanf' : format string '%[^\n]' requires an argument of type 'char *', but variadic argument 1 has type 'double'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(82): note: while compiling class template member function 'void Stack<float>::read(int)'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(145): note: see reference to function template instantiation 'void Stack<float>::read(int)' being compiled
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(141): note: see reference to class template instantiation 'Stack<float>' being compiled
+c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(92): warning C4477: 'scanf' : format string '%[^\n]' requires an argument of type 'char *', but variadic argument 1 has type 'T'
+          with
+          [
+              T=std::string
+          ]
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(82): note: while compiling class template member function 'void Stack<std::string>::read(int)'
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(157): note: see reference to function template instantiation 'void Stack<std::string>::read(int)' being compiled
+  c:\users\rspse\source\repos\rspseshasai\c-dac_assignments\cpp_assignment\cpp_assignment-2\sample\sample.cpp(153): note: see reference to class template instantiation 'Stack<std::string>' being compiled
+  Sample.vcxproj -> C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\Cpp_Assignment\Cpp_Assignment-2\Debug\Sample.exe

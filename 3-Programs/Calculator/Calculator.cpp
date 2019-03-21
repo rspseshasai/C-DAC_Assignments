@@ -11,23 +11,21 @@ int sub1(int, int);
 int mul1(int, int);
 int div1(int, int);
 
-
+//-----------------------------------To Check if given String has Balanced Paranthesis
 int isBalanced(string str)
 {
 	stack<char>s;
 	int flag = 0;
-	//cout << str<<"\n";
 	for (int i = 0; i < str.length(); i++)
 	{
 		if (str[i] == '(' || str[i] == '[' || str[i] == '{')
 		{
 			s.push(str[i]);
 		}
-		else //if ((!s.empty()) && ((str[i] == ')' &&	s.top() == '(') || (str[i] == ']' && s.top() == '[') || (str[i] == '}' && s.top() == '{')))
+		else
 		{
 			if (str[i] == ')')
 			{
-				//cout << "--)--\n";
 				if (!s.empty())
 				{
 					if (s.top() == '(')
@@ -36,7 +34,6 @@ int isBalanced(string str)
 				else
 				{
 					flag = 1;
-					//cout << "Not Balanced\n";
 				}
 			}
 
@@ -50,11 +47,10 @@ int isBalanced(string str)
 				else
 				{
 					flag = 1;
-					//cout << "Not Balanced\n";
 				}
 			}
 
-			if (str[i] == '}')
+			else if (str[i] == '}')
 			{
 				if (!s.empty())
 				{
@@ -64,22 +60,20 @@ int isBalanced(string str)
 				else
 				{
 					flag = 1;
-					//cout << "Not Balanced\n";
 				}
 			}
 		}
 	}
 	if (s.empty() && flag == 0)
 	{
-		//cout << "1\n";
 		return 1;
 	}
 	else
 	{
-		//cout << "-o-\n";
 		return 0;
 	}
 }
+//------------------------------------------------------------------------------------
 
 int precedence(char oper)
 {
@@ -97,140 +91,120 @@ int operation(int var1, int var2, char oper)
 	case '+':
 		ans = add1(var1, var2);
 		return ans;
-	case '-': 
+	case '-':
 		ans = sub1(var1, var2);
 		return ans;
-	case '*': 
+	case '*':
 		ans = mul1(var1, var2);
 		return ans;
-	case '/': 
+	case '/':
+		if (var2 == 0)
+		{
+			cout << "Divide by zero not Possible\n";
+			exit(0);
+		}
 		ans = div1(var1, var2);
 		return ans;
 	}
 }
 
-// - 2 * 6
-
 int ExpressionEval(string str)
 {
-	stack<int >vars;
-	stack<char >opers;
-
+	stack<int >variablesStack;
+	stack<char >operatorsStack;
+	//cout <<str<< "\n";
 	for (int i = 0; i < str.length(); i++)
 	{
-
+		//cout << str << "\n";
 		if (str[i] == ' ')
 			continue;
-		//push to vars stack if we encounter a digit
+		//----------------------------Push to variablesStack if we encounter a digit
+
 		else if (str[i] == '-')
 		{
-			//cout << "sta = " << str[i] << "\n";
-			if (i == 1)
+			if (i == 1) //To check if - is unary
 			{
 				int n = 0;
+				//cout << str[i + 3] << "\n";
+				if (str[i + 3] == '+' || str[i + 3] == '*' || str[i + 3] == '/' || str[i + 3] == '(' || str[i + 3] == '-')
+				{
+					cout << "Invalid Expression-7\n";
+					exit(0);
+				}
+
 				i += 2;
 				while (i < str.length() &&
 					isdigit(str[i]))
 				{
-					//cout << str[i] << " ";
 					n = n * 10 + (str[i] - '0');
 					i++;
 				}
-				//cout<<n << "\n";
 				n = n * (-1);
-				//cout << "st = " << n << "\n";
-				vars.push(n);
+				variablesStack.push(n);
 			}
-			else if (i < 3)
+			else if (i < 3) //i.e., i==2  =>  - is binary
 			{
-				//opers.push('-');
+				while (!operatorsStack.empty() && precedence(operatorsStack.top()) >= precedence(str[i]))
+				{
+					int var1 = variablesStack.top();
+					variablesStack.pop();
 
-				//if (str[i - 3] == '+' || str[i - 3] == '-' || str[i - 3] == '*' || str[i - 3] == '/')
-				//{
-				//	int n = 0;
-				//	i += 2;
-				//	while (i < str.length() &&
-				//		isdigit(str[i]))
-				//	{
-				//		//cout << str[i] << " ";
-				//		n = n * 10 + (str[i] - '0');
-				//		i++;
-				//	}
-				//	//cout<<n << "\n";
-				//	n = n * (-1);
-				//	cout << "st = " << n << "\n";
-				//	vars.push(n);
-				//}
-				//else
-				//{
-					//------------------------------
-					while (!opers.empty() && precedence(opers.top()) >= precedence(str[i]))
-					{
-						int var1 = vars.top();
-						vars.pop();
+					int var2 = variablesStack.top();
+					variablesStack.pop();
 
-						int var2 = vars.top();
-						vars.pop();
+					char oper = operatorsStack.top();
+					operatorsStack.pop();
 
-						char oper = opers.top();
-						opers.pop();
-
-						vars.push(operation(var2, var1, oper));
-					}
-					opers.push(str[i]);
-					//------------------------------
-				/*}*/
+					variablesStack.push(operation(var2, var1, oper));
+				}
+				operatorsStack.push(str[i]);
 			}
-			else
+			else // i >= 3
 			{
-				//opers.push(str[i - 3]);
 				if (str[i - 3] == '+' || str[i - 3] == '-' || str[i - 3] == '*' || str[i - 3] == '/' || str[i - 3] == '(')
 				{
 					if (str[i + 2] == '+' || str[i + 2] == '-' || str[i + 2] == '*' || str[i + 2] == '/')
 					{
-						cout << "Invalid Expression\n";
+						cout << "Invalid Expression - 6\n";
 						return -1;
 					}
-					else
+					else // - is unary
 					{
-						//cout << "Hii\n";
 						int n = 0;
 						i += 2;
 						while (i < str.length() &&
 							isdigit(str[i]))
 						{
-							//cout << str[i] << " ";
 							n = n * 10 + (str[i] - '0');
 							i++;
 						}
-						//cout<<n << "\n";
 						n = n * (-1);
-						//cout << n <<"\n";
-						//cout << "St = " << n << "\n";
-						vars.push(n);
+						variablesStack.push(n);
 					}
 				}
-				else
+				else // - is binary
 				{
-					while (!opers.empty() && precedence(opers.top()) >= precedence(str[i]))
+					while (!operatorsStack.empty() && precedence(operatorsStack.top()) >= precedence(str[i]))
 					{
-						int var1 = vars.top();
-						vars.pop();
+						int var1 = variablesStack.top();
+						variablesStack.pop();
 
-						int var2 = vars.top();
-						vars.pop();
+						int var2 = variablesStack.top();
+						variablesStack.pop();
 
-						char oper = opers.top();
-						opers.pop();
+						char oper = operatorsStack.top();
+						operatorsStack.pop();
 
-						vars.push(operation(var2, var1, oper));
+						variablesStack.push(operation(var2, var1, oper));
 					}
-					opers.push(str[i]);
+					operatorsStack.push(str[i]);
 				}
 
 			}
 
 		}
+
+		//-----------------------------------Push to variablesStack if we encounter a digit
 		else if (isdigit(str[i]))
 		{
 			int n = 0;
@@ -240,94 +214,98 @@ int ExpressionEval(string str)
 				n = n * 10 + (str[i] - '0');
 				i++;
 			}
-			//cout<<n << "\n";
-			vars.push(n);
+			variablesStack.push(n);
 		}
-		//push to opers stack if we encounter open brace
-		else if(str[i]=='(')
+		//--------------------------------------------------------------------------------
+
+		//-----------------------------------push to operatorsStack if we encounter open brace
+		else if (str[i] == '(')
 		{
-			opers.push(str[i]);
+			operatorsStack.push(str[i]);
 		}
+		//----------------------------------------------------------------------------------
 
-
-		//closing brace
+		//----------------------------------------------Closing brace
 		else if (str[i] == ')')
 		{
-			while (opers.top() != '(' && !opers.empty())
+			while (operatorsStack.top() != '(' && !operatorsStack.empty())
 			{
-				int var1 = vars.top();
-				vars.pop();
+				int var1 = variablesStack.top();
+				variablesStack.pop();
 
-				int var2 = vars.top();
-				vars.pop();
+				int var2 = variablesStack.top();
+				variablesStack.pop();
 
-				char oper = opers.top();
-				opers.pop();
+				char oper = operatorsStack.top();
+				operatorsStack.pop();
 
-				vars.push(operation(var2, var1, oper));
+				variablesStack.push(operation(var2, var1, oper));
 			}
-			opers.pop(); //to Pop open brace;
+			operatorsStack.pop(); //to Pop open brace;
 		}
 
+		//-----------------------------------------------Operators other than - occurs
 		else
 		{
-			while (!opers.empty() && precedence(opers.top()) >= precedence(str[i]))
+			while (!operatorsStack.empty() && precedence(operatorsStack.top()) >= precedence(str[i]))
 			{
-				int var1 = vars.top();
-				vars.pop();
+				int var1 = variablesStack.top();
+				variablesStack.pop();
 
-				int var2 = vars.top();
-				vars.pop();
+				int var2 = variablesStack.top();
+				variablesStack.pop();
 
-				char oper = opers.top();
-				opers.pop();
+				char oper = operatorsStack.top();
+				operatorsStack.pop();
 
-				vars.push(operation(var2, var1, oper));
+				variablesStack.push(operation(var2, var1, oper));
 			}
-			opers.push(str[i]);
+			operatorsStack.push(str[i]);
 		}
+		//------------------------------------------------------------------------------
 	}
 
-	//perform operation for remaining elements in stack
-	while (!opers.empty())
+	//---------------------------------------------Perform operation for remaining elements in stack
+	while (!operatorsStack.empty())
 	{
-		int var1 = vars.top();
-		vars.pop();
+		int var1 = variablesStack.top();
+		variablesStack.pop();
 
-		int var2 = vars.top();
-		vars.pop();
+		int var2 = variablesStack.top();
+		variablesStack.pop();
 
-		char oper = opers.top();
-		opers.pop();
+		char oper = operatorsStack.top();
+		operatorsStack.pop();
 
-		vars.push(operation(var2, var1, oper));
+		variablesStack.push(operation(var2, var1, oper));
 	}
-
-	return vars.top();
+	//---------------------------------------------------------------------------------------------------
+	return variablesStack.top();
 }
 
 int main()
 {
-	string inpExpression;
+	string inpExpression, modifiedExp;
 	cout << "Enter an Expression\n";
 	getline(cin, inpExpression);
-	string exp;
 	if (1 == isBalanced(inpExpression))
 	{
-		//----------------------------------------------------------
-		// 2(2+3)
-
 		for (int i = 0; i < inpExpression.length(); i++)
 		{
+			//------------------------------To check that there is no Operator before brackets
 			if (inpExpression[i] == '(')
 			{
-				if(i-1 >=0 )
+				if (i - 1 >= 0)
+				{
 					if (inpExpression[i - 1] != '+' && inpExpression[i - 1] != '-' && inpExpression[i - 1] != '*' && inpExpression[i - 1] != '/' && inpExpression[i - 1] != '(')
 					{
 						cout << "Invalid Expression-4\n";
 						return 0;
 					}
-				//-2*(*6)
+				}
+				//---------------------------------------------------------------------------------
+
+					//----------------------------------To check that there is no Operator after brackets
 				if (i + 1 < inpExpression.length())
 				{
 					if (inpExpression[i + 1] == '+' || inpExpression[i + 1] == '*' || inpExpression[i + 1] == '/')
@@ -336,14 +314,15 @@ int main()
 						return 0;
 					}
 				}
+				//-----------------------------------------------------------------------------------
 			}
 		}
 
-		//----------------------------------------------------------
-		int el = inpExpression.length() - 1;
+		int expLength = inpExpression.length() - 1;
+		//--------------------------------------To check if there is no operator at beginning or at the end
 		if (
 			(inpExpression[0] == '/' || inpExpression[0] == '*' || inpExpression[0] == '+') ||
-			(inpExpression[el] == '/' || inpExpression[el] == '*' || inpExpression[el] == '+' || inpExpression[el] == '-')
+			(inpExpression[expLength] == '/' || inpExpression[expLength] == '*' || inpExpression[expLength] == '+' || inpExpression[expLength] == '-')
 			)
 		{
 			if (inpExpression[0] != '-')
@@ -352,10 +331,14 @@ int main()
 				return 0;
 			}
 		}
+		//-------------------------------------------------------------------------------------------------
 
-		string e;
-		e += inpExpression[0];
-		for (int i = 1; i < el; i++)
+		//---------------------------To check if there are not two Operators in consequent positions
+
+		//string tempString;
+		//tempString += inpExpression[0];
+
+		for (int i = 1; i < expLength; i++)
 		{
 			if (inpExpression[i] == '+' || inpExpression[i] == '-' || inpExpression[i] == '*' || inpExpression[i] == '/')
 			{
@@ -366,18 +349,19 @@ int main()
 				}
 			}
 		}
+		//--------------------------------------------------------------------------------------------
 
 		for (int i = 0; i < inpExpression.length(); i++)
 		{
 			if (inpExpression[i] == '+' || inpExpression[i] == '-' || inpExpression[i] == '*' || inpExpression[i] == '/' || inpExpression[i] == '(' || inpExpression[i] == ')')
 			{
-				exp += ' ';
-				exp += inpExpression[i];
-				exp += ' ';
+				modifiedExp += ' ';
+				modifiedExp += inpExpression[i];
+				modifiedExp += ' ';
 			}
 			else if (isdigit(inpExpression[i]))
 			{
-				exp += inpExpression[i];
+				modifiedExp += inpExpression[i];
 			}
 			else
 			{
@@ -386,38 +370,8 @@ int main()
 			}
 		}
 
-		//  2 + 3 * - 6
-
-		//for (int i = 0; i < exp.length(); i++)
-		//{
-
-		//	if (exp[i] == '+' || exp[i] == '-' || exp[i] == '*' || exp[i] == '/')
-		//	{
-		//		if (exp[i + 2] == '-')
-		//		{
-
-		//		}
-		//		else
-		//			exp1 += exp[i];
-		//	}
-		//	else if (isdigit(exp[i]))
-		//	{
-		//		exp1 += exp[i];
-		//	}
-		//	else if (exp[i] == ' ')
-		//	{
-		//		exp1 += exp[i];
-		//	}
-		//	else
-		//	{
-		//		cout << "Expression Invalid \n";
-		//		exit(0);
-		//	}
-		//}
-
-		//cout << exp << "\n";
 		cout << "Value after Evaluation is: ";
-		ans = ExpressionEval(exp);
+		ans = ExpressionEval(modifiedExp);
 		cout << ans << "\n";
 	}
 	else

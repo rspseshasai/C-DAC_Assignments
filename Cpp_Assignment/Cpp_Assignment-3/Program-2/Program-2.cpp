@@ -2,6 +2,9 @@
 
 #include "pch.h"
 #include <iostream>
+#include <string>
+#include <cctype>
+
 #define SIZE 5
 using namespace std;
 
@@ -16,13 +19,14 @@ public:
 	{
 		top = -1;
 	}
-	void push();
+	void push(t num);
 	void pop();
 	void display();
+	t get_input();
 };
 
 template<class t>
-void Stack<t>::push()
+void Stack<t>::push(t num)
 {
 	try
 	{
@@ -30,10 +34,8 @@ void Stack<t>::push()
 			throw top;
 		else
 		{
-			cout << "Enter Data: " << endl;
-			t d;
-			cin >> d;
-			data[++top] = d;
+			//strcpy(data[++top], num);
+'			data[++top] = num;
 		}
 	}
 	catch (int a)
@@ -81,35 +83,90 @@ void Stack<t>::display()
 	}
 }
 
-int TestInput(int inp)
+//----------------------------------To Validate Integer Input
+bool input_valid(string s)
 {
-	while (1)
+	int i, length_s;
+	bool is_valid = true;
+
+	length_s = s.length();
+
+	if (length_s == 0)
+		is_valid = false;
+	else
 	{
-		if (cin.fail())
+		if (length_s == 1)
 		{
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << "Invalid Input...Enter Again !!" << endl;
-			cin >> inp;
+			if (!isdigit(s[0]))
+				is_valid = false;
 		}
-		if (!cin.fail())
-			break;
+		else
+		{
+			if (s[0] == '+' || s[0] == '-' || isdigit(s[0]) != 0)
+			{
+				for (i = 1; i < length_s; i++)
+				{
+					if (!isdigit(s[i]))
+					{
+						if(s[i]!='.')
+							is_valid = false;
+					}
+				}
+			}
+			else
+				is_valid = false;
+		}
 	}
-	return inp;
+	return is_valid;
 }
+
+template<class t>
+t Stack<t> :: get_input()
+{
+	int int_number, check_float=0;
+	float float_number;
+	string number;
+	bool is_valid=true;
+
+	do {
+		getline(cin, number);
+		cout << "\n";
+
+		is_valid = input_valid(number);
+
+		if (is_valid == false)
+			cout << "Invalid Input...Enter again\n" << endl;
+	} while (is_valid == false);
+
+	for (int i = 0; i < number.length(); i++)
+	{
+		if (number[i] == '.')
+			check_float = 1;
+	}
+	if (check_float == 1)
+	{
+		float_number = stof(number);
+		return float_number;
+	}
+	int_number = stoi(number);
+
+	return int_number;
+}
+
+//-------------------------------------------------------------------------
+
 
 int main()
 {
 	while (1)
 	{
-		cout << "1-Integer Stack   2-Float Stack   3-Exit\n";
-
-		int dataType, flag = 0;
-		cin >> dataType;
-		dataType = TestInput(dataType);
-
+		cout << "1-Integer Stack   2-Float Stack  3-String Stack   4-Exit\n";
 		Stack<int >Obj_Int;
 		Stack<float >Obj_Float;
+		Stack<string>Obj_Char;
+		string inp_string;
+		int dataType, flag = 0;
+		dataType = Obj_Int.get_input();
 		int operation;
 
 		switch (dataType)
@@ -119,12 +176,14 @@ int main()
 			{
 
 				cout << "1-Push  2-Pop  3-Display 4-Exit\n";
-				cin >> operation;
-				operation = TestInput(operation);
+				operation = Obj_Int.get_input();
 				switch (operation)
 				{
 				case 1:
-					Obj_Int.push();
+					cout << "Enter Data: " << endl;
+					int num;
+					num = Obj_Int.get_input();
+					Obj_Int.push(num);
 					break;
 				case 2:
 					Obj_Int.pop();
@@ -144,12 +203,14 @@ int main()
 			while (flag != 1)
 			{
 				cout << "1-Push  2-Pop  3-Display 4-Exit\n";
-				cin >> operation;
-				operation = TestInput(operation);
+				operation = Obj_Int.get_input();
 				switch (operation)
 				{
 				case 1:
-					Obj_Float.push();
+					cout << "Enter Data: " << endl;
+					float num;
+					num = Obj_Float.get_input();
+					Obj_Float.push(num);
 					break;
 				case 2:
 					Obj_Float.pop();
@@ -166,6 +227,38 @@ int main()
 			}
 			break;
 		case 3:
+			while (flag != 1)
+			{
+				cout << "1-Push  2-Pop  3-Display 4-Exit\n";
+				operation = Obj_Int.get_input();
+				switch (operation)
+				{
+				case 1:
+					cout << "Enter Data: " << "\n";
+					//scanf("%[^\n]s", inp_string);
+					cin >> inp_string;
+					//getline(cin, inp_string);
+					cin.ignore();
+					//cin.clear();
+					//printf("%s\n", inp_string);
+					//num = Obj_Int.get_input();
+					Obj_Char.push(inp_string);
+					break;
+				case 2:
+					Obj_Char.pop();
+					break;
+				case 3:
+					Obj_Char.display();
+					break;
+				case 4:
+					flag = 1;
+					break;
+				default:
+					cout << "Enter Valid Input between (1-4)\n\n";
+				}
+			}
+			break;
+		case 4:
 			exit(0);
 		default:
 			cout << "Enter Valid input between (1-3)\n\n";
@@ -174,4 +267,3 @@ int main()
 	}
 	system("pause");
 }
-

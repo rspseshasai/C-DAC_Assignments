@@ -1,0 +1,6 @@
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\MultipleReturnValues\bin\Debug\MultipleReturnValues.exe.config
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\MultipleReturnValues\bin\Debug\MultipleReturnValues.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\MultipleReturnValues\bin\Debug\MultipleReturnValues.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\MultipleReturnValues\obj\Debug\MultipleReturnValues.csproj.CoreCompileInputs.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\MultipleReturnValues\obj\Debug\MultipleReturnValues.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\MultipleReturnValues\obj\Debug\MultipleReturnValues.pdb

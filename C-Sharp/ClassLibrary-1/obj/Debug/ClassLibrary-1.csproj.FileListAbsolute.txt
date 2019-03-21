@@ -1,0 +1,6 @@
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ClassLibrary-1\bin\Debug\ClassLibrary-1.dll
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ClassLibrary-1\bin\Debug\ClassLibrary-1.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ClassLibrary-1\obj\Debug\ClassLibrary-1.csprojAssemblyReference.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ClassLibrary-1\obj\Debug\ClassLibrary-1.csproj.CoreCompileInputs.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ClassLibrary-1\obj\Debug\ClassLibrary-1.dll
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\ClassLibrary-1\obj\Debug\ClassLibrary-1.pdb

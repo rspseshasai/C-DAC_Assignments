@@ -1,0 +1,10 @@
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\bin\Debug\Program-1.exe.config
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\bin\Debug\Program-1.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\bin\Debug\Program-1.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\obj\Debug\Program-1.csprojAssemblyReference.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\obj\Debug\Program-1.csproj.CoreCompileInputs.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\obj\Debug\Program-1.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\obj\Debug\Program-1.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\bin\Debug\ClassLibrary-1.dll
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\bin\Debug\ClassLibrary-1.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Program-1\obj\Debug\Program-1.csproj.CopyComplete
