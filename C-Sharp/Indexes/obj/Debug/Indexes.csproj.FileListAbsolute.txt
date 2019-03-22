@@ -1,0 +1,7 @@
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Indexes\bin\Debug\Indexes.exe.config
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Indexes\bin\Debug\Indexes.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Indexes\bin\Debug\Indexes.pdb
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Indexes\obj\Debug\Indexes.csprojAssemblyReference.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Indexes\obj\Debug\Indexes.csproj.CoreCompileInputs.cache
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Indexes\obj\Debug\Indexes.exe
+C:\Users\rspse\source\repos\rspseshasai\C-DAC_Assignments\C-Sharp\Indexes\obj\Debug\Indexes.pdb
